@@ -14,6 +14,45 @@
     --theme-color-1: #303092;
     --theme-color-2: #202062;
     --theme-color-3: #101052;
+    
+    /* CyberPanel 2.5.5-dev theme variables */
+    --do-blue-primary: #303092;
+    --do-blue-secondary: #202062;
+    --do-blue-accent: #4040c5;
+    --do-blue-hover: #101052;
+    --do-blue-text: #ffffff;
+    --do-blue-bg: #ffffff;
+    --do-blue-panel: #ffffff;
+    --do-blue-sidebar: #303092;
+    --do-blue-border: rgba(0, 0, 0, 0.2);
+    --do-blue-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --primary-color: var(--do-blue-primary);
+    --secondary-color: var(--do-blue-secondary);
+    --accent-color: var(--do-blue-accent);
+    --hover-color: var(--do-blue-hover);
+    --text-color: var(--do-blue-text);
+    --background-color: var(--do-blue-bg);
+    --panel-background: var(--do-blue-panel);
+    --sidebar-background: var(--do-blue-sidebar);
+    --border-color: var(--do-blue-border);
+    --shadow-color: var(--do-blue-shadow);
+}
+
+[data-theme="dark"] {
+    --primary-color: var(--do-blue-primary);
+    --secondary-color: var(--do-blue-secondary);
+    --accent-color: var(--do-blue-accent);
+    --hover-color: var(--do-blue-hover);
+    --text-color: var(--do-blue-text);
+    --background-color: var(--do-blue-bg);
+    --panel-background: var(--do-blue-panel);
+    --sidebar-background: var(--do-blue-sidebar);
+    --border-color: var(--do-blue-border);
+    --shadow-color: var(--do-blue-shadow);
 }
 
 textarea {

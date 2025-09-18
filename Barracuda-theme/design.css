@@ -1,58 +1,93 @@
 /*
-    Name: Barracuda Dark v1
-    Version: 1.0
+    Name: Barracuda Dark v2.0
+    Version: 2.0
     Author: Barracuda1337
-    Tested on CyberPanel 2.3 build 2
+    Tested on CyberPanel 2.5.5-dev
     Served with APACHE-2.0 license
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+    - Updated for CyberPanel 2.5.5-dev theme system compatibility
 */
 
+/* CSS Variables for CyberPanel 2.5.5-dev compatibility */
+:root {
+    --barracuda-bg-primary: #0d0e12;
+    --barracuda-bg-secondary: #1a1c21;
+    --barracuda-bg-sidebar: #0d0e12;
+    --barracuda-text-primary: #ffffff;
+    --barracuda-text-secondary: #babac0;
+    --barracuda-accent: #6495ED;
+    --barracuda-border: #393E46;
+    --barracuda-hover: #26272f;
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --bg-primary: var(--barracuda-bg-primary);
+    --bg-secondary: var(--barracuda-bg-secondary);
+    --bg-sidebar: var(--barracuda-bg-sidebar);
+    --text-primary: var(--barracuda-text-primary);
+    --text-secondary: var(--barracuda-text-secondary);
+    --accent-color: var(--barracuda-accent);
+    --border-color: var(--barracuda-border);
+    --bg-hover: var(--barracuda-hover);
+}
+
+[data-theme="dark"] {
+    --bg-primary: var(--barracuda-bg-primary);
+    --bg-secondary: var(--barracuda-bg-secondary);
+    --bg-sidebar: var(--barracuda-bg-sidebar);
+    --text-primary: var(--barracuda-text-primary);
+    --text-secondary: var(--barracuda-text-secondary);
+    --accent-color: var(--barracuda-accent);
+    --border-color: var(--barracuda-border);
+    --bg-hover: var(--barracuda-hover);
+}
+
 body::-webkit-scrollbar {
-    background-color:#0d0e12 ;
-    width:16px
+    background-color: var(--barracuda-bg-primary);
+    width: 16px;
 }
 body::-webkit-scrollbar-track {
-    background-color:#0d0e12 
+    background-color: var(--barracuda-bg-primary);
 }
 body::-webkit-scrollbar-track:hover {
-    background-color:#0d0e12 
+    background-color: var(--barracuda-bg-primary);
 }
 body::-webkit-scrollbar-thumb {
-    background-color:#babac0;
-    border-radius:16px;
-    border:5px solid #0d0e12 
+    background-color: var(--barracuda-text-secondary);
+    border-radius: 16px;
+    border: 5px solid var(--barracuda-bg-primary);
 }
 body::-webkit-scrollbar-thumb:hover {
-    background-color:#a0a0a5;
-    border:4px solid #0d0e12 
+    background-color: #a0a0a5;
+    border: 4px solid var(--barracuda-bg-primary);
 }
-body::-webkit-scrollbar-button {display:none}
+body::-webkit-scrollbar-button {display: none;}
 
 
 .row-title,
 label, .current-pack{
-    color: #fff !important;
+    color: var(--barracuda-text-primary) !important;
 }
 
 .content-box {
-    background-color: #1a1c21 !important;
-    border: 1px solid #393E46 !important;
+    background-color: var(--barracuda-bg-secondary) !important;
+    border: 1px solid var(--barracuda-border) !important;
 }
 
 .table {
-    border: 1px solid #393E46;
-    background: #1a1c21;
+    border: 1px solid var(--barracuda-border);
+    background: var(--barracuda-bg-secondary);
 }
 
 #page-title p {
-    color: #fff !important;
+    color: var(--barracuda-text-primary) !important;
 }
 #page-sidebar li a.sf-with-ul:after {
-    color: #babac0 !important;
+    color: var(--barracuda-text-secondary) !important;
 }
 .content-box-wrapper .panel-body {
-
-    background-color: #1a1c21;
+    background-color: var(--barracuda-bg-secondary);
     margin-top: 10px;
     text-align: center;
     border-radius: 50px;
@@ -60,12 +95,13 @@ label, .current-pack{
 }
 
 .content-box-wrapper .panel-body a {
-    color: #fff !important;
+    color: var(--barracuda-text-primary) !important;
 }
 
 .btn-primary {
     border: none;
     border-radius: 50px !important;
+    background-color: var(--barracuda-accent) !important;
 }
 
 a:focus,
@@ -74,29 +110,28 @@ a:hover {
 }
 
 h2 {
-    color: #fff !important;
+    color: var(--barracuda-text-primary) !important;
     font-weight: bolder !important;
 }
 
 body {
-    background-color: #1a1c21 !important;
-    color: #fff !important;
-
+    background-color: var(--barracuda-bg-secondary) !important;
+    color: var(--barracuda-text-primary) !important;
 }
 
 #sidebar-menu-item-server-ip-address>span {
-    color: #fff !important;
+    color: var(--barracuda-text-primary) !important;
     font-weight: 400 !important;
 }
 
 #page-sidebar ul li a .glyph-icon {
-    color: #fff !important;
+    color: var(--barracuda-text-primary) !important;
 }
 
 .panel {
-    background-color: #0d0e12 !important;
+    background-color: var(--barracuda-bg-primary) !important;
     border-radius: 10px;
-    border: 1px solid #393E46;
+    border: 1px solid var(--barracuda-border);
 }
 
 textarea {
@@ -109,15 +144,15 @@ div.tile-content-wrapper {
 
 a.tile-box.tile-box-shortcut.btn-primary {
     border-radius: 10px;
-    background-color: #6495ED;
+    background-color: var(--barracuda-accent) !important;
 }
 
 #page-header {
-    border-bottom: 1px solid #393E46;
+    border-bottom: 1px solid var(--barracuda-border);
     position: fixed;
     width: 100%;
     z-index: 999;
-    background-color: white !important;
+    background-color: var(--barracuda-bg-primary) !important;
 }
 
 #page-sidebar::-webkit-scrollbar {
@@ -125,19 +160,18 @@ a.tile-box.tile-box-shortcut.btn-primary {
 }
 
 #page-sidebar {
-    border-right: 1px solid #393E46;
-
+    border-right: 1px solid var(--barracuda-border);
     padding-top: 72px;
     position: fixed;
     overflow-y: scroll;
     height: 100% !important;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: var(--barracuda-bg-sidebar) !important;
 }
 
 #page-content {
-    background-color: #1a1c21 !important;
-
+    background-color: var(--barracuda-bg-secondary) !important;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -181,12 +215,12 @@ h6 {
 }
 
 #sidebar-menu {
-    background: #0d0e12;
+    background: var(--barracuda-bg-sidebar);
     padding: 5px 0px;
 }
 
 #page-header {
-    background: #0d0e12 !important;
+    background: var(--barracuda-bg-sidebar) !important;
 }
 
 .logo-bg {
@@ -237,7 +271,7 @@ h6 {
 
 #page-sidebar ul>li>a:hover {
     border-color: transparent;
-    background-color: #26272f !important;
+    background-color: var(--barracuda-hover) !important;
     border-radius: 50px;
     text-decoration: none;
     transition: none;
@@ -254,9 +288,9 @@ h6 {
 a.sfActive {
     border-radius: 50px !important;
     border: 1px solid;
-    border-color: #babac0 !important;
+    border-color: var(--barracuda-text-secondary) !important;
     border-right-width: 0px !important;
-    background-color: #26272f !important;
+    background-color: var(--barracuda-hover) !important;
     text-decoration: none !important;
 }
 
@@ -277,7 +311,7 @@ a.sfActive span {
 
 #sidebar-menu>li>a>span,
 .sidebar-submenu ul li a>span {
-    color: #ffffff;
+    color: var(--barracuda-text-primary);
     font-size: 12px;
     margin-left: 10px;
     font-weight: 300;

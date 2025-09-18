@@ -1,16 +1,61 @@
+/*
+    Name: CyberPanel Gaussian Style v2.0
+    Version: 2.0
+    Author: Original Author
+    Tested on CyberPanel 2.5.5-dev
+    Served with APACHE-2.0 license
+    - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+    - Updated for CyberPanel 2.5.5-dev theme system compatibility
+*/
+
+/* CSS Variables for CyberPanel 2.5.5-dev compatibility */
+:root {
+    --gaussian-bg-image: url(https://live.staticflickr.com/65535/51705970602_9f5ec7b9a8_k.jpg);
+    --gaussian-text: #ffffff;
+    --gaussian-bg-overlay: rgba(0, 0, 0, 0.24);
+    --gaussian-border: rgba(255, 255, 255, 0.14);
+    --gaussian-accent: #32ab13;
+    --gaussian-warning: #ffc107;
+    --gaussian-danger: #f02769;
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --bg-primary: var(--gaussian-bg-image);
+    --text-primary: var(--gaussian-text);
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --accent-color: var(--gaussian-accent);
+    --border-color: var(--gaussian-border);
+}
+
+[data-theme="dark"] {
+    --bg-primary: var(--gaussian-bg-image);
+    --text-primary: var(--gaussian-text);
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --accent-color: var(--gaussian-accent);
+    --border-color: var(--gaussian-border);
+}
+
 body {
-    background-image: url(https://live.staticflickr.com/65535/51705970602_9f5ec7b9a8_k.jpg);
+    background-image: var(--gaussian-bg-image);
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     transition: background .2s;
-    color:#fff;
+    color: var(--gaussian-text);
 }
 
-a, a:hover, a:focus { text-decoration: none; color:#fff}
-a { color: #fff; }
-a:hover { color: #dee4e7; }
+a, a:hover, a:focus { 
+    text-decoration: none; 
+    color: var(--gaussian-text);
+}
+a { 
+    color: var(--gaussian-text); 
+}
+a:hover { 
+    color: #dee4e7; 
+}
 
 .table-responsive .col-lg-9 {
     padding: 2px 0 0 15px;
@@ -20,7 +65,7 @@ a:hover { color: #dee4e7; }
 }
 
 .content-box-header h2 {
-    color: #fff!important;
+    color: var(--gaussian-text) !important;
     font-size: 1.4em;
 }
 
@@ -33,16 +78,16 @@ a:hover { color: #dee4e7; }
 }
 
 .form-group .alert-success p {
-    color: #32ab13!important;
+    color: var(--gaussian-accent) !important;
 }
 
 .col-sm-12 .alert p {
-    color: #32ab13!important;
+    color: var(--gaussian-accent) !important;
 }
 
 #page-header .badge {
-    color: #fff;
-    background-color: #ffc107;
+    color: var(--gaussian-text);
+    background-color: var(--gaussian-warning);
     font-size: 0.95em;
     padding-right: 0.6em;
     padding-left: 0.6em;
@@ -50,7 +95,7 @@ a:hover { color: #dee4e7; }
 }
 
 .panel p {
-    color: #fff;
+    color: var(--gaussian-text);
     padding: 0 15px;
 }
 
@@ -60,37 +105,37 @@ a:hover { color: #dee4e7; }
 
 .col-sm-4 .table th,
 .col-sm-8 .table th {
-    color: #fff;
+    color: var(--gaussian-text);
 }
 
 .form-group .col-sm-8 .table {
-    color: #fff;
-    background-color: rgb(255 255 255 / 24%);
-    border-color: rgb(255 255 255 / 14%);
+    color: var(--gaussian-text);
+    background-color: var(--gaussian-bg-overlay);
+    border-color: var(--gaussian-border);
     margin: 40px 0 !important;
 }
 
 .form-group .col-sm-4 .table {
-    color: #fff;
-    background-color: rgb(255 255 255 / 24%);
-    border-color: rgb(255 255 255 / 14%);
+    color: var(--gaussian-text);
+    background-color: var(--gaussian-bg-overlay);
+    border-color: var(--gaussian-border);
     margin: 20px 0 !important;
 }
 
 .example-box-wrapper .dbDetails button:hover {
-    color: #fff;
+    color: var(--gaussian-text);
     background-color: rgb(255 255 255 / 2%);
     border-color: rgb(255 255 255 / 0.54);
 }
 
 .example-box-wrapper .dbDetails button {
-    color: #fff;
+    color: var(--gaussian-text);
     background-color: rgb(255 255 255 / 14%);
     border-color: rgb(255 255 255 / 0.24);
 }
 
 .example-box-wrapper .dbDetails span {
-    color: #fff;
+    color: var(--gaussian-text);
     font-weight: 500;
 }
 

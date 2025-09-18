@@ -1,69 +1,107 @@
 /*
-
-True Dark CyberPanel Theme - Copy this entire code into CyberPanel -> Design Menu > Editor
-This is created by Ruhani Rabin https://www.ruhanirabin.com, https://rabin.blog
-Kindly give the credit when you modify and apply
----- GPL 2.0 ----
-
+    Name: True Dark CyberPanel v2.0
+    Version: 2.0
+    Author: Ruhani Rabin (https://www.ruhanirabin.com, https://rabin.blog)
+    Tested on CyberPanel 2.5.5-dev
+    Served with GPL 2.0 license
+    - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+    - Updated for CyberPanel 2.5.5-dev theme system compatibility
 */
 
+/* CSS Variables for CyberPanel 2.5.5-dev compatibility */
+:root {
+    --true-dark-bg: #1a1a1a;
+    --true-dark-panel: #252525;
+    --true-dark-sidebar: #141414;
+    --true-dark-text: #ffffff;
+    --true-dark-accent: #45be46;
+    --true-dark-warning: #5600ff;
+    --true-dark-danger: #252525;
+    --true-dark-border: #414141;
+    --true-dark-primary: #032d45;
+    --true-dark-primary-hover: #101a4a;
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --bg-primary: var(--true-dark-bg);
+    --bg-secondary: var(--true-dark-panel);
+    --bg-sidebar: var(--true-dark-sidebar);
+    --text-primary: var(--true-dark-text);
+    --text-secondary: #9ca3af;
+    --accent-color: var(--true-dark-accent);
+    --border-color: var(--true-dark-border);
+}
+
+[data-theme="dark"] {
+    --bg-primary: var(--true-dark-bg);
+    --bg-secondary: var(--true-dark-panel);
+    --bg-sidebar: var(--true-dark-sidebar);
+    --text-primary: var(--true-dark-text);
+    --text-secondary: #9ca3af;
+    --accent-color: var(--true-dark-accent);
+    --border-color: var(--true-dark-border);
+}
+
 .badge-yellow, .bg-yellow, .btn-yellow, .hover-yellow:hover, .label-yellow {
-    color: #fff;
-    background: #5600ff;
+    color: var(--true-dark-text);
+    background: var(--true-dark-warning);
     border-color: #deb200;
 }
 .badge-danger, .bg-danger, .bg-red, .bootstrap-switch-danger, .btn-danger, .checkbox-danger div[id^=uniform-] span.checked, .hover-danger:hover, .hover-red:hover, .label-danger, .progress-bar-danger, .radio-danger div[id^=uniform-] span.checked {
-    color: #fff;
-    border-color: #252525;
-    background: #252525;
+    color: var(--true-dark-text);
+    border-color: var(--true-dark-danger);
+    background: var(--true-dark-danger);
 }
 
 .badge, .bs-badge, .bs-label {
-    color: #fff;
+    color: var(--true-dark-text);
     text-align: center;
     white-space: nowrap;
 }
 .btn-primary:hover, .btn-primary:focus {
-    background: #101a4a;
+    background: var(--true-dark-primary-hover);
     border-color: #33ff86;
 }
 .btn-primary {
-    background: #032d45;
+    background: var(--true-dark-primary);
     border-color: #337ab7;
 }
 .c100 {
-    background-color: #252525;
+    background-color: var(--true-dark-panel);
 }
 
-.c100>span { color: #252525; }
+.c100>span { 
+    color: var(--true-dark-panel); 
+}
 .ng-binding {
     display: inline;
-    color: #45be46;
+    color: var(--true-dark-accent);
 }
 .table .table {
-    background-color: #252525;
+    background-color: var(--true-dark-panel);
 }
 .modal-content {
-    background-color: #252525;
+    background-color: var(--true-dark-panel);
 }
 
 .bootstrap-timepicker-widget table td input, .chosen-container-multi, .chosen-container-single .chosen-search input, .dataTables_length select, .form-control, .input, .ui-toolbar input, .ui-toolbar select, div.dataTables_filter input {
-    background: #252525;
+    background: var(--true-dark-panel);
     color: #ddd;
-    border: 1px solid #252525;
-    -webkit-box-shadow: inset 1px 1px 3px #252525;
-    -moz-box-shadow: inset 1px 1px 3px #252525;
-    box-shadow: inset 1px 1px 3px #252525;
+    border: 1px solid var(--true-dark-panel);
+    -webkit-box-shadow: inset 1px 1px 3px var(--true-dark-panel);
+    -moz-box-shadow: inset 1px 1px 3px var(--true-dark-panel);
+    box-shadow: inset 1px 1px 3px var(--true-dark-panel);
 }
 
 .bootstrap-timepicker-widget table td input:focus, .chosen-container-active, .chosen-container-multi.chosen-container-active, .form-control:focus, .input:focus, .selector.focus, .ui-toolbar input:focus, .ui-toolbar select:focus, div.dataTables_filter input:focus {
     color: #ccc;
-    border-color: #45be46;
+    border-color: var(--true-dark-accent);
 }
 
 #header-logo, #page-sidebar.collapse, #theme-options {
     display: block;
-    background-color: #141414;
+    background-color: var(--true-dark-sidebar);
 }
 
 #header-logo .logo-content-big, .logo-content-small {
@@ -83,33 +121,33 @@ background: linear-gradient(90deg, #141414, #1b1b1b, #222222, #282828, #303030, 
 }
 
 #sidebar-menu {
-    background: #141414;
+    background: var(--true-dark-sidebar);
 }
 #page-sidebar ul li.header {
     color: #b4b2b2;
 }
 #page-content {
-    background: #1a1a1a;
+    background: var(--true-dark-bg);
 }
 #page-title h2 {
     color: #afb0b1;
 }
 
 .bg-default, .bg-white.dashboard-box .button-pane, .bg-white.tile-box .tile-footer, .border-default, .bordered-row .form-group, .btn-default, .button-pane, .chosen-container, .chosen-container .chosen-drop, .chosen-container-active.chosen-with-drop .chosen-single div, .chosen-container-multi .chosen-choices li.search-choice, .chosen-container-single .chosen-single div, .content-box, .content-box-header.bg-default, .content-box-header.bg-gray, .content-box-header.bg-white, .dashboard-buttons .btn, .daterangepicker .calendar-date, .dropdown-menu, .email-body, .fc-state-default, .fc-widget-content, .fc-widget-header, .img-thumbnail, .jvectormap-label, .jvectormap-zoomin, .jvectormap-zoomout, .list-group-item, .mail-toolbar, .mailbox-wrapper .nav-list li a, .minicolors-panel, .ms-container .ms-list, .ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .nav-tabs, .nav-tabs>li>a:focus, .nav-tabs>li>a:hover, .pagination>li>a, .pagination>li>span, .panel, .panel-box.bg-default, .panel-box.bg-gray, .panel-box.bg-white, .panel-content.bg-default, .panel-content.bg-gray, .panel-content.bg-white, .panel-footer, .panel-group .panel-footer+.panel-collapse .panel-body, .panel-group .panel-heading+.panel-collapse .panel-body, .panel-heading, .popover, .popover-title, .posts-list li, .selector i, .table-bordered, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th, .tabs-navigation>ul, .tabs-navigation>ul li.ui-state-hover>a, .tabs-navigation>ul li>a, .thumb-pane, .thumbnail, .timeline-box .tl-item .popover, .timeline-box:before, .ui-accordion .ui-accordion-header, .ui-datepicker, .ui-datepicker .ui-datepicker-buttonpane button, .ui-datepicker-buttonpane, .ui-dialog, .ui-dialog .ui-dialog-titlebar, .ui-dialog-buttonpane, .ui-menu, .ui-spinner .ui-spinner-button, .ui-tabs-nav, div.selector, div[id^=uniform-] span {
-    border-color: #414141;
+    border-color: var(--true-dark-border);
 }
 .panel {
     margin-bottom: 20px;
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;
-    background-color: #414141;
+    background-color: var(--true-dark-border);
     box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
 }
 
 body {
     color: #eaecef;
-    background-color: #1a1a1a;
+    background-color: var(--true-dark-bg);
 }
 
 label {
@@ -117,11 +155,11 @@ label {
 }
 
 .current-pack {
-    color: #45be46;
+    color: var(--true-dark-accent);
 }
 
 .table {
-    background: #252525;
+    background: var(--true-dark-panel);
 }
 
 #page-sidebar ul li a .glyph-icon {

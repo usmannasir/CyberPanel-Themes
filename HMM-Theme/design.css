@@ -19,6 +19,45 @@ scroll-behaviour: smooth !important;
 --theme-color-1: #050c9c;
 --theme-color-2: #111111;
 --theme-color-3: #101052;
+
+/* CyberPanel 2.5.5-dev theme variables */
+--hmm-primary: #050c9c;
+--hmm-secondary: #111111;
+--hmm-accent: #1679ab;
+--hmm-hover: #101052;
+--hmm-text: #292929;
+--hmm-bg: #fff7fc;
+--hmm-panel: #ffffff;
+--hmm-sidebar: #ffffff;
+--hmm-border: #cecece;
+--hmm-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --primary-color: var(--hmm-primary);
+    --secondary-color: var(--hmm-secondary);
+    --accent-color: var(--hmm-accent);
+    --hover-color: var(--hmm-hover);
+    --text-color: var(--hmm-text);
+    --background-color: var(--hmm-bg);
+    --panel-background: var(--hmm-panel);
+    --sidebar-background: var(--hmm-sidebar);
+    --border-color: var(--hmm-border);
+    --shadow-color: var(--hmm-shadow);
+}
+
+[data-theme="dark"] {
+    --primary-color: var(--hmm-primary);
+    --secondary-color: var(--hmm-secondary);
+    --accent-color: var(--hmm-accent);
+    --hover-color: var(--hmm-hover);
+    --text-color: var(--hmm-text);
+    --background-color: var(--hmm-bg);
+    --panel-background: var(--hmm-panel);
+    --sidebar-background: var(--hmm-sidebar);
+    --border-color: var(--hmm-border);
+    --shadow-color: var(--hmm-shadow);
 }
 ::-webkit-scrollbar {
 width: 6px;
