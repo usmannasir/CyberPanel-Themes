@@ -1,17 +1,55 @@
 /*
-    Name: CF INSPIRED WHITE v2
-    Version: 1.1
+    Name: CF INSPIRED WHITE v2.1
+    Version: 2.1
     Author: DazEB based on CypherPotato
-    Tested on CyberPanel 2.3 build 2
+    Tested on CyberPanel 2.5.5-dev
     Served with APACHE-2.0 license
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+    - Updated for CyberPanel 2.5.5-dev theme system compatibility
     /usr/local/CyberCP/public/static/emailMarketing  <-admin icons here
     /usr/local/CyberCP/public/static/images/icons    <- main icons here
     /usr/local/CyberCP/public/static/baseTemplate/assets/image-resources   <- admin logo goes here
 */
 
+/* CSS Variables for CyberPanel 2.5.5-dev compatibility */
+:root {
+    --cf-primary: #022352;
+    --cf-secondary: #6495ED;
+    --cf-accent: #6495ED;
+    --cf-hover: #ECF4FF;
+    --cf-border: #dfe8f1;
+    --cf-text: #121212;
+    --cf-bg: #ffffff;
+    --cf-sidebar-bg: #f8f9fa;
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --accent-color: var(--cf-accent);
+    --accent-hover: #5a7fd8;
+    --bg-primary: var(--cf-bg);
+    --bg-secondary: var(--cf-bg);
+    --bg-sidebar: var(--cf-sidebar-bg);
+    --text-primary: var(--cf-text);
+    --text-secondary: #64748b;
+    --border-color: var(--cf-border);
+    --bg-hover: var(--cf-hover);
+}
+
+[data-theme="dark"] {
+    --accent-color: var(--cf-accent);
+    --accent-hover: #5a7fd8;
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a3e;
+    --bg-sidebar: #16162e;
+    --text-primary: #e4e4e7;
+    --text-secondary: #9ca3af;
+    --border-color: #2a2a5e;
+    --bg-hover: #252550;
+}
+
 #page-sidebar ul li a .glyph-icon {
-    color: #022352 !important;
+    color: var(--cf-primary) !important;
 }
 
 .panel {
@@ -28,14 +66,14 @@ div.tile-content-wrapper {
 
 a.tile-box.tile-box-shortcut.btn-primary {
     border-radius: 10px;
-    background-color: #6495ED;
+    background-color: var(--cf-accent) !important;
 }
 
 #page-header {
     position: fixed;
     width: 100%;
     z-index: 999;
-    background-color: white !important;
+    background-color: var(--cf-bg) !important;
 }
 
 #page-sidebar::-webkit-scrollbar {
@@ -45,11 +83,12 @@ a.tile-box.tile-box-shortcut.btn-primary {
 #page-sidebar {
     padding-top: 72px;
     position: fixed;
-    border-right: 1px solid #dfe8f1;
+    border-right: 1px solid var(--cf-border);
     overflow-y: scroll;
     height: 100% !important;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: var(--cf-sidebar-bg) !important;
 }
 
 #page-content {
@@ -142,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-sidebar ul>li>a:hover {
     border-color: transparent;
-    background-color: #ECF4FF !important;
+    background-color: var(--cf-hover) !important;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     text-decoration: underline;
@@ -159,9 +198,9 @@ h1, h2, h3, h4, h5, h6 {
 
 a.sfActive {
     border: 1px solid;
-    border-color: rgb(185,214,255) !important;
+    border-color: var(--cf-hover) !important;
     border-right-width: 0px !important;
-    background-color: rgb(236, 244, 255) !important;
+    background-color: var(--cf-hover) !important;
     border-bottom-left-radius: 50px !important;
     border-top-left-radius: 50px !important;
     text-decoration: underline !important;
@@ -173,7 +212,7 @@ a.sfActive span {
 }
 
 #sidebar-menu>li>a>span, .sidebar-submenu ul li a>span {
-    color: rgb(18, 18, 18);
+    color: var(--cf-text);
     font-size: 13px;
     margin-left: 10px;
     font-weight: 300;
@@ -197,7 +236,7 @@ a.sfActive span {
 
 #sidebar-menu-item-server-ip-address {
     padding-bottom: 48px !important;
-    border-bottom: 1px solid #dfe8f1 !important;
+    border-bottom: 1px solid var(--cf-border) !important;
 }
 #sidebar-menu-item-server-ip-address:hover {
     border-bottom-left-radius: 0px !important;
@@ -205,7 +244,7 @@ a.sfActive span {
     background-color: transparent !important;
 }
 #sidebar-menu-item-server-ip-address>span {
-    color: rgb(0, 43, 103) !important;
+    color: var(--cf-primary) !important;
     font-weight: 400 !important;
 }
 

@@ -1,14 +1,51 @@
+/*
+    Name: Blue Green Theme v2.0
+    Version: 2.0
+    Author: Original Author
+    Tested on CyberPanel 2.5.5-dev
+    Served with APACHE-2.0 license
+    - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+    - Updated for CyberPanel 2.5.5-dev theme system compatibility
+*/
+
+/* CSS Variables for CyberPanel 2.5.5-dev compatibility */
+:root {
+    --blue-green-primary: #11998e;
+    --blue-green-secondary: #38ef7d;
+    --blue-green-accent: #38ef7d;
+    --blue-green-hover: #32d16a;
+    --blue-green-text: #ffffff;
+    --blue-green-bg: #f8f9fa;
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --accent-color: var(--blue-green-primary);
+    --accent-hover: var(--blue-green-hover);
+    --bg-primary: var(--blue-green-bg);
+    --text-primary: #2f3640;
+    --text-secondary: #64748b;
+}
+
+[data-theme="dark"] {
+    --accent-color: var(--blue-green-secondary);
+    --accent-hover: var(--blue-green-hover);
+    --bg-primary: #0f0f23;
+    --text-primary: #e4e4e7;
+    --text-secondary: #9ca3af;
+}
+
 .bg-gradient-9 {
-background: #11998e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: var(--blue-green-primary);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--blue-green-secondary), var(--blue-green-primary));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--blue-green-secondary), var(--blue-green-primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #page-sidebar a:hover {
-color: #38ef7d;
+    color: var(--blue-green-secondary);
 }
-.bsdatepicker td span:hover,.bsdatepicker td.active,.bsdatepicker td.day.active:hover,.bsdatepicker th.next:hover,.bsdatepicker th.prev:hover,.btn-primary.active,.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,.daterangepicker .calendar th.next:hover,.daterangepicker .calendar th.prev:hover,.daterangepicker td.active,.daterangepicker td.available.active:hover,.hover-primary:hover,.label-primary[href]:focus,.label-primary[href]:hover,.open .dropdown-toggle.btn-primary,.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover,.ui-accordion-header.ui-accordion-header-active.ui-state-hover,.ui-datepicker .ui-datepicker-next.ui-state-hover,.ui-datepicker .ui-datepicker-prev.ui-state-hover,.ui-datepicker td a:hover,.ui-dialog-buttonset button:hover,.ui-rangeSlider-bar:active,.ui-rangeSlider-bar:hover,.ui-slider-handle.ui-state-active,.ui-slider-handle.ui-state-hover{color:#fff;border-color: #38ef7d;background-color: #38ef7d;}
-.btn-primary{border-color: #11998e;background-color: #11998e;}
+.bsdatepicker td span:hover,.bsdatepicker td.active,.bsdatepicker td.day.active:hover,.bsdatepicker th.next:hover,.bsdatepicker th.prev:hover,.btn-primary.active,.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,.daterangepicker .calendar th.next:hover,.daterangepicker .calendar th.prev:hover,.daterangepicker td.active,.daterangepicker td.available.active:hover,.hover-primary:hover,.label-primary[href]:focus,.label-primary[href]:hover,.open .dropdown-toggle.btn-primary,.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover,.ui-accordion-header.ui-accordion-header-active.ui-state-hover,.ui-datepicker .ui-datepicker-next.ui-state-hover,.ui-datepicker .ui-datepicker-prev.ui-state-hover,.ui-datepicker td a:hover,.ui-dialog-buttonset button:hover,.ui-rangeSlider-bar:active,.ui-rangeSlider-bar:hover,.ui-slider-handle.ui-state-active,.ui-slider-handle.ui-state-hover{color:var(--blue-green-text);border-color: var(--blue-green-secondary);background-color: var(--blue-green-secondary);}
+.btn-primary{border-color: var(--blue-green-primary);background-color: var(--blue-green-primary);}
 
-.btn-blue-alt.active, .btn-blue-alt.disabled, .btn-blue-alt.disabled.active, .btn-blue-alt.disabled:active, .btn-blue-alt.disabled:focus, .btn-blue-alt.disabled:hover, .btn-blue-alt:active, .btn-blue-alt:focus, .btn-blue-alt:hover, .btn-blue-alt[disabled], .btn-blue-alt[disabled].active, .btn-blue-alt[disabled]:active, .btn-blue-alt[disabled]:focus, .btn-blue-alt[disabled]:hover, .label-blue-alt[href]:focus, .label-blue-alt[href]:hover, .open .dropdown-toggle.btn-blue-alt {color:#fff;background:#11998e;border-color: #11998e;}
+.btn-blue-alt.active, .btn-blue-alt.disabled, .btn-blue-alt.disabled.active, .btn-blue-alt.disabled:active, .btn-blue-alt.disabled:focus, .btn-blue-alt.disabled:hover, .btn-blue-alt:active, .btn-blue-alt:focus, .btn-blue-alt:hover, .btn-blue-alt[disabled], .btn-blue-alt[disabled].active, .btn-blue-alt[disabled]:active, .btn-blue-alt[disabled]:focus, .btn-blue-alt[disabled]:hover, .label-blue-alt[href]:focus, .label-blue-alt[href]:hover, .open .dropdown-toggle.btn-blue-alt {color:var(--blue-green-text);background:var(--blue-green-primary);border-color: var(--blue-green-primary);}
 
-.badge-blue-alt, .bg-blue-alt, .btn-blue-alt, .hover-blue-alt:hover, .label-blue-alt {color:#fff;background:#38ef7d;border-color: #38ef7d;}
+.badge-blue-alt, .bg-blue-alt, .btn-blue-alt, .hover-blue-alt:hover, .label-blue-alt {color:var(--blue-green-text);background:var(--blue-green-secondary);border-color: var(--blue-green-secondary);}

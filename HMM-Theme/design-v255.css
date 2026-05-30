@@ -1,0 +1,51 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: HMM-Theme */
+
+:root {
+  --theme-color-0: #1679ab;
+  --theme-color-1: #050c9c;
+  --theme-color-2: #111111;
+  --theme-color-3: #101052;
+  --hmm-primary: #050c9c;
+  --hmm-secondary: #111111;
+  --hmm-accent: #1679ab;
+  --hmm-hover: #101052;
+  --hmm-text: #292929;
+  --hmm-bg: #fff7fc;
+  --hmm-panel: #ffffff;
+  --hmm-sidebar: #ffffff;
+  --hmm-border: #cecece;
+  --hmm-shadow: rgba(0, 0, 0, 0.1);
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --primary-color: var(--hmm-primary);
+  --secondary-color: var(--hmm-secondary);
+  --accent-color: var(--hmm-accent);
+  --hover-color: var(--hmm-hover);
+  --text-color: var(--hmm-text);
+  --background-color: var(--hmm-bg);
+  --panel-background: var(--hmm-panel);
+  --sidebar-background: var(--hmm-sidebar);
+  --border-color: var(--hmm-border);
+  --shadow-color: var(--hmm-shadow);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --primary-color: var(--hmm-primary);
+  --secondary-color: var(--hmm-secondary);
+  --accent-color: var(--hmm-accent);
+  --hover-color: var(--hmm-hover);
+  --text-color: var(--hmm-text);
+  --background-color: var(--hmm-bg);
+  --panel-background: var(--hmm-panel);
+  --sidebar-background: var(--hmm-sidebar);
+  --border-color: var(--hmm-border);
+  --shadow-color: var(--hmm-shadow);
+}

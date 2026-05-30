@@ -1,0 +1,69 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: dark-theme */
+
+:root {
+  --background-color-first: #151516;
+  --background-color-second: #18191a;
+  --background-color-third: #202124;
+  --background-color-fourth: #737373;
+  --hover-text-color: #d7d7d9;
+  --hover-background-color: #202124;
+  --hover-border-color: #40464d;
+  --border-color-first: #212327;
+  --border-color-second: transparent;
+  --link-color-first: #d7d7d9;
+  --shadow-color-first: rgba(0,0,0,0.3);
+  --text-color-first: #bbb;
+  --sidebar-header-text-color: var(--body-text-color);
+  --sidebar-header-background: transparent;
+  --sidebar-header-border-color:var(--border-color-first);
+  --background-color-badge: #9126266b;
+  --text-color-badge: #c4c4c4;
+  --loading-background:var(--background-color-second);
+  --resources-text-color:#67696a;
+  --resources-background:transparent;
+  --resources-circle-background:var(--background-color-second);
+  --resources-circle-border:var(--background-color-third);
+  --resources-shadow:var(--shadow-color-first);
+  --body-text-color:var(--text-color-first);
+  --body-background:var(--background-color-first);
+  --link-color:var(--link-color-first);
+  --link-hover-color:var(--link-color-first);
+  --button-color:var(--link-color-first);
+  --button-hover-color:var(--link-color-first);
+  --header-background:var(--background-color-first);
+  --header-border-color:var(--border-color-first);
+  --sidebar-overview-color:var(--link-color-first);
+  --sidebar-overview-background:var(--background-color-first);
+  --sidebar-overview-border-color:var(--border-color-second);
+  --sidebar-color:var(--link-color-first);
+  --sidebar-background:var(--background-color-first);
+  --sidebar-border-color:var(--border-color-second);
+  --sidebar-submenu-color:var(--link-color-first);
+  --sidebar-submenu-background:var(--background-color-first);
+  --sidebar-submenu-border-color:var(--border-color-second);
+  --sidebar-hover-text-color:var(--hover-text-color);
+  --sidebar-hover-background:var(--hover-background-color);
+  --sidebar-hover-border-color:var(--hover-border-color);
+  --sidebar-icon-color:var(--link-color-first);
+  --sidebar-divider:unset;
+  --content-text-color: #d9d9d9;
+  --content-background: var(--background-color-second);
+  --content-border-color: transparent;
+  --dashboard-box-shortcut-color:#d0d0d0;
+  --dashboard-box-shortcut-background: transparent;
+  --dashboard-box-shortcut-background-border:#2d2e2e;
+  --form-control-text-color: var(--body-text-color);
+  --form-control-background: var(--background-color-third);
+  --form-control-disabled-background: var(--background-color-third);
+  --form-control-border-color:#40464d;
+  --form-line-color:#dfe8f142;
+  --form-control-shadow:var(--border-color-first);
+  --form-control-focus-border-color: #306da2;
+  --form-control-focus-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px rgba(112, 116, 119, 0.6);
+}
+

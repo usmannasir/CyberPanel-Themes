@@ -14,8 +14,48 @@
     --third-color: #494396;
     --c100-color: #473e7d45;
     --panel-text-color: #5346a0;
+    
+    /* CyberPanel 2.5.5-dev theme variables */
+    --vj-blue-primary: #423e7d;
+    --vj-blue-secondary: #494396;
+    --vj-blue-accent: #4979b1;
+    --vj-blue-hover: #5346a0;
+    --vj-blue-text: #0b003c;
+    --vj-blue-bg: #ffffff;
+    --vj-blue-panel: #ffffff;
+    --vj-blue-sidebar: #ffffff;
+    --vj-blue-border: #4a3e7d6e;
+    --vj-blue-shadow: rgba(62, 69, 125, 0.15);
+    --vj-blue-gradient: linear-gradient(-45deg, #4979b1 0%, #3f3e7d 30%);
+    --vj-blue-gradient-2: linear-gradient(311deg, #4979b1 0%, #3f3e7d 30%);
+}
 
-  }
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --primary-color: var(--vj-blue-primary);
+    --secondary-color: var(--vj-blue-secondary);
+    --accent-color: var(--vj-blue-accent);
+    --hover-color: var(--vj-blue-hover);
+    --text-color: var(--vj-blue-text);
+    --background-color: var(--vj-blue-bg);
+    --panel-background: var(--vj-blue-panel);
+    --sidebar-background: var(--vj-blue-sidebar);
+    --border-color: var(--vj-blue-border);
+    --shadow-color: var(--vj-blue-shadow);
+}
+
+[data-theme="dark"] {
+    --primary-color: var(--vj-blue-primary);
+    --secondary-color: var(--vj-blue-secondary);
+    --accent-color: var(--vj-blue-accent);
+    --hover-color: var(--vj-blue-hover);
+    --text-color: var(--vj-blue-text);
+    --background-color: var(--vj-blue-bg);
+    --panel-background: var(--vj-blue-panel);
+    --sidebar-background: var(--vj-blue-sidebar);
+    --border-color: var(--vj-blue-border);
+    --shadow-color: var(--vj-blue-shadow);
+}
 
 
  

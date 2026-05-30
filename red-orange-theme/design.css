@@ -1,3 +1,45 @@
+:root {
+    /* CyberPanel 2.5.5-dev theme variables */
+    --red-orange-primary: #f12711;
+    --red-orange-secondary: #f5af19;
+    --red-orange-accent: #f12711;
+    --red-orange-hover: #f5af19;
+    --red-orange-text: #ffffff;
+    --red-orange-bg: #ffffff;
+    --red-orange-panel: #ffffff;
+    --red-orange-sidebar: #ffffff;
+    --red-orange-border: #f5af19;
+    --red-orange-shadow: rgba(241, 39, 17, 0.1);
+    --red-orange-gradient: linear-gradient(to right, #f5af19, #f12711);
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --primary-color: var(--red-orange-primary);
+    --secondary-color: var(--red-orange-secondary);
+    --accent-color: var(--red-orange-accent);
+    --hover-color: var(--red-orange-hover);
+    --text-color: var(--red-orange-text);
+    --background-color: var(--red-orange-bg);
+    --panel-background: var(--red-orange-panel);
+    --sidebar-background: var(--red-orange-sidebar);
+    --border-color: var(--red-orange-border);
+    --shadow-color: var(--red-orange-shadow);
+}
+
+[data-theme="dark"] {
+    --primary-color: var(--red-orange-primary);
+    --secondary-color: var(--red-orange-secondary);
+    --accent-color: var(--red-orange-accent);
+    --hover-color: var(--red-orange-hover);
+    --text-color: var(--red-orange-text);
+    --background-color: var(--red-orange-bg);
+    --panel-background: var(--red-orange-panel);
+    --sidebar-background: var(--red-orange-sidebar);
+    --border-color: var(--red-orange-border);
+    --shadow-color: var(--red-orange-shadow);
+}
+
 .bg-gradient-9 {
 background: #f12711;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */

@@ -1,0 +1,60 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: legacy-VJ-Theme-Dark */
+
+:root {
+  --bt-background-color: -webkit-linear-gradient(-45deg, #2d2d2d  0%, #323232 30%);
+  --bt-background-color-2: -webkit-linear-gradient(311deg, #2d2d2d  0%, #323232 30%);
+  --first-color: #e0e0e0;
+  --second-color: #3c3c3c;
+  --icon-color: #fbfbfb;
+  --third-color: #ededed;
+  --c100-color: #bcbcbc;
+  --panel-text-color: #fbfbfb;
+  --m-background-color: #1c1c1c;
+  --btn-primary-background: #3c3c3c;
+  --m1-box-shadow: rgb(0 0 0 / 15%) 0px 4px 12px;
+  --vj-dark-primary: #e0e0e0;
+  --vj-dark-secondary: #3c3c3c;
+  --vj-dark-accent: #2d2d2d;
+  --vj-dark-hover: #ededed;
+  --vj-dark-text: #fbfbfb;
+  --vj-dark-bg: #1c1c1c;
+  --vj-dark-panel: #2c2c2c;
+  --vj-dark-sidebar: #292929;
+  --vj-dark-border: #4a4a4a6e;
+  --vj-dark-shadow: rgba(0, 0, 0, 0.15);
+  --vj-dark-gradient: linear-gradient(-45deg, #2d2d2d 0%, #323232 30%);
+  --vj-dark-gradient-2: linear-gradient(311deg, #2d2d2d 0%, #323232 30%);
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --primary-color: var(--vj-dark-primary);
+  --secondary-color: var(--vj-dark-secondary);
+  --accent-color: var(--vj-dark-accent);
+  --hover-color: var(--vj-dark-hover);
+  --text-color: var(--vj-dark-text);
+  --background-color: var(--vj-dark-bg);
+  --panel-background: var(--vj-dark-panel);
+  --sidebar-background: var(--vj-dark-sidebar);
+  --border-color: var(--vj-dark-border);
+  --shadow-color: var(--vj-dark-shadow);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --primary-color: var(--vj-dark-primary);
+  --secondary-color: var(--vj-dark-secondary);
+  --accent-color: var(--vj-dark-accent);
+  --hover-color: var(--vj-dark-hover);
+  --text-color: var(--vj-dark-text);
+  --background-color: var(--vj-dark-bg);
+  --panel-background: var(--vj-dark-panel);
+  --sidebar-background: var(--vj-dark-sidebar);
+  --border-color: var(--vj-dark-border);
+  --shadow-color: var(--vj-dark-shadow);
+}

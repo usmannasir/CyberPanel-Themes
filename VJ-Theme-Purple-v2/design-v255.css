@@ -1,0 +1,45 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: VJ-Theme-Purple-v2 */
+
+:root {
+  --vj-main: #7d3e6f;
+  --vj-light: #b14949;
+  --vj-grad: linear-gradient(135deg, #b14949 0%, #7d3e6f 100%);
+  --bg-primary: #f0f0ff !important;
+  --bg-secondary: #ffffff !important;
+  --bg-sidebar: #fdfafd !important;
+  --bg-sidebar-item: #ffffff !important;
+  --text-primary: #3c002f !important;
+  --accent-color: var(--vj-main) !important;
+  --accent-hover: var(--vj-light) !important;
+  --border-color: rgba(125, 62, 111, 0.15) !important;
+  --shadow-color: rgba(125, 62, 111, 0.1) !important;
+  --ai-banner-bg: var(--vj-grad) !important;
+  --bg-hover: rgba(125, 62, 111, 0.08) !important;
+  --active-shadow: rgba(125, 62, 111, 0.4) !important;
+  --text-inverse: #ffffff !important;
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --vj-dark-bg: #150d14;
+  --vj-card-bg: #241822;
+  --vj-accent: #d689bd;
+  --vj-text: #eee4eb;
+  --vj-border: #3d2638;
+  --bg-primary: var(--vj-dark-bg) !important;
+  --bg-secondary: var(--vj-card-bg) !important;
+  --bg-sidebar: #1a0f18 !important;
+  --bg-sidebar-item: #2a1b27 !important;
+  --text-primary: var(--vj-text) !important;
+  --text-secondary: #a08a99 !important;
+  --accent-color: #b14949 !important;
+  --border-color: var(--vj-border) !important;
+  --shadow-color: rgba(0, 0, 0, 0.5) !important;
+  --ai-banner-bg: linear-gradient(135deg, #4a2b42 0%, #241822 100%) !important;
+  --bg-hover: rgba(255, 255, 255, 0.06) !important;
+}

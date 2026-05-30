@@ -38,6 +38,46 @@
     --color-green-2: #004b1a;
     --color-border: #89baed36;
     --color-border-2: #90e1ff33;
+    
+    /* CyberPanel 2.5.5-dev theme variables */
+    --cyberspace-primary: #00a1a9;
+    --cyberspace-secondary: #059b82;
+    --cyberspace-accent: #1aabe1;
+    --cyberspace-hover: #00a0c5;
+    --cyberspace-text: #ffffff;
+    --cyberspace-bg: #031521;
+    --cyberspace-panel: #00000066;
+    --cyberspace-sidebar: #0000008c;
+    --cyberspace-border: #89baed36;
+    --cyberspace-shadow: rgba(0, 0, 0, 0.4);
+    --cyberspace-gradient: linear-gradient(0deg, rgba(0, 95, 95, 0.41) 0%, rgba(1, 1, 24, 0.80) 100%);
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --primary-color: var(--cyberspace-primary);
+    --secondary-color: var(--cyberspace-secondary);
+    --accent-color: var(--cyberspace-accent);
+    --hover-color: var(--cyberspace-hover);
+    --text-color: var(--cyberspace-text);
+    --background-color: var(--cyberspace-bg);
+    --panel-background: var(--cyberspace-panel);
+    --sidebar-background: var(--cyberspace-sidebar);
+    --border-color: var(--cyberspace-border);
+    --shadow-color: var(--cyberspace-shadow);
+}
+
+[data-theme="dark"] {
+    --primary-color: var(--cyberspace-primary);
+    --secondary-color: var(--cyberspace-secondary);
+    --accent-color: var(--cyberspace-accent);
+    --hover-color: var(--cyberspace-hover);
+    --text-color: var(--cyberspace-text);
+    --background-color: var(--cyberspace-bg);
+    --panel-background: var(--cyberspace-panel);
+    --sidebar-background: var(--cyberspace-sidebar);
+    --border-color: var(--cyberspace-border);
+    --shadow-color: var(--cyberspace-shadow);
 }
 
 /*------------------------------------------------------------------------------

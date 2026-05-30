@@ -1,0 +1,41 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: Barracuda-theme */
+
+:root {
+  --barracuda-bg-primary: #0d0e12;
+  --barracuda-bg-secondary: #1a1c21;
+  --barracuda-bg-sidebar: #0d0e12;
+  --barracuda-text-primary: #ffffff;
+  --barracuda-text-secondary: #babac0;
+  --barracuda-accent: #6495ED;
+  --barracuda-border: #393E46;
+  --barracuda-hover: #26272f;
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --bg-primary: var(--barracuda-bg-primary);
+  --bg-secondary: var(--barracuda-bg-secondary);
+  --bg-sidebar: var(--barracuda-bg-sidebar);
+  --text-primary: var(--barracuda-text-primary);
+  --text-secondary: var(--barracuda-text-secondary);
+  --accent-color: var(--barracuda-accent);
+  --border-color: var(--barracuda-border);
+  --bg-hover: var(--barracuda-hover);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --bg-primary: var(--barracuda-bg-primary);
+  --bg-secondary: var(--barracuda-bg-secondary);
+  --bg-sidebar: var(--barracuda-bg-sidebar);
+  --text-primary: var(--barracuda-text-primary);
+  --text-secondary: var(--barracuda-text-secondary);
+  --accent-color: var(--barracuda-accent);
+  --border-color: var(--barracuda-border);
+  --bg-hover: var(--barracuda-hover);
+}

@@ -1,0 +1,34 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: Cyberpanel-Gaussian-Style */
+
+:root {
+  --gaussian-bg-image: url(https://live.staticflickr.com/65535/51705970602_9f5ec7b9a8_k.jpg);
+  --gaussian-text: #ffffff;
+  --gaussian-bg-overlay: rgba(0, 0, 0, 0.24);
+  --gaussian-border: rgba(255, 255, 255, 0.14);
+  --gaussian-accent: #32ab13;
+  --gaussian-warning: #ffc107;
+  --gaussian-danger: #f02769;
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --bg-primary: var(--gaussian-bg-image);
+  --text-primary: var(--gaussian-text);
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --accent-color: var(--gaussian-accent);
+  --border-color: var(--gaussian-border);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --bg-primary: var(--gaussian-bg-image);
+  --text-primary: var(--gaussian-text);
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --accent-color: var(--gaussian-accent);
+  --border-color: var(--gaussian-border);
+}

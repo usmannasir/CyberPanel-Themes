@@ -1,0 +1,41 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: true-dark-cyberpanel */
+
+:root {
+  --true-dark-bg: #1a1a1a;
+  --true-dark-panel: #252525;
+  --true-dark-sidebar: #141414;
+  --true-dark-text: #ffffff;
+  --true-dark-accent: #45be46;
+  --true-dark-warning: #5600ff;
+  --true-dark-danger: #252525;
+  --true-dark-border: #414141;
+  --true-dark-primary: #032d45;
+  --true-dark-primary-hover: #101a4a;
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --bg-primary: var(--true-dark-bg);
+  --bg-secondary: var(--true-dark-panel);
+  --bg-sidebar: var(--true-dark-sidebar);
+  --text-primary: var(--true-dark-text);
+  --text-secondary: #9ca3af;
+  --accent-color: var(--true-dark-accent);
+  --border-color: var(--true-dark-border);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --bg-primary: var(--true-dark-bg);
+  --bg-secondary: var(--true-dark-panel);
+  --bg-sidebar: var(--true-dark-sidebar);
+  --text-primary: var(--true-dark-text);
+  --text-secondary: #9ca3af;
+  --accent-color: var(--true-dark-accent);
+  --border-color: var(--true-dark-border);
+}

@@ -9,6 +9,45 @@
     --text-muted: #8da0aa;
     --border-light: #d3cb87f2;
     --white: #ffffff;
+    
+    /* CyberPanel 2.5.5-dev theme variables */
+    --ragnarock-primary: #003049;
+    --ragnarock-secondary: #f77f00;
+    --ragnarock-accent: #d62828;
+    --ragnarock-hover: #fdc85e;
+    --ragnarock-text: #003049;
+    --ragnarock-bg: #eae2b7;
+    --ragnarock-panel: #f6efca;
+    --ragnarock-sidebar: #003049;
+    --ragnarock-border: #d3cb87f2;
+    --ragnarock-shadow: rgba(17, 17, 26, 0.1);
+}
+
+/* Override CyberPanel 2.5.5-dev theme variables */
+[data-theme="light"] {
+    --primary-color: var(--ragnarock-primary);
+    --secondary-color: var(--ragnarock-secondary);
+    --accent-color: var(--ragnarock-accent);
+    --hover-color: var(--ragnarock-hover);
+    --text-color: var(--ragnarock-text);
+    --background-color: var(--ragnarock-bg);
+    --panel-background: var(--ragnarock-panel);
+    --sidebar-background: var(--ragnarock-sidebar);
+    --border-color: var(--ragnarock-border);
+    --shadow-color: var(--ragnarock-shadow);
+}
+
+[data-theme="dark"] {
+    --primary-color: var(--ragnarock-primary);
+    --secondary-color: var(--ragnarock-secondary);
+    --accent-color: var(--ragnarock-accent);
+    --hover-color: var(--ragnarock-hover);
+    --text-color: var(--ragnarock-text);
+    --background-color: var(--ragnarock-bg);
+    --panel-background: var(--ragnarock-panel);
+    --sidebar-background: var(--ragnarock-sidebar);
+    --border-color: var(--ragnarock-border);
+    --shadow-color: var(--ragnarock-shadow);
 }
 
 /* Header and Base Styles */
