@@ -1,0 +1,57 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: legacy-VJ-Theme-Green */
+
+:root {
+  --bt-background-color: -webkit-linear-gradient(-45deg, #52b149 0%, #457d3e 30%);
+  --bt-background-color-2: -webkit-linear-gradient(311deg, #52b149 0%, #457d3e 30%);
+  --first-color: #3e7d58;
+  --second-color: #3e7d586e;
+  --icon-color: #003c39;
+  --third-color: #43965c;
+  --c100-color: #3e7d4845;
+  --panel-text-color: #46a076;
+  --vj-green-primary: #3e7d58;
+  --vj-green-secondary: #43965c;
+  --vj-green-accent: #52b149;
+  --vj-green-hover: #46a076;
+  --vj-green-text: #003c39;
+  --vj-green-bg: #ffffff;
+  --vj-green-panel: #ffffff;
+  --vj-green-sidebar: #ffffff;
+  --vj-green-border: #3e7d586e;
+  --vj-green-shadow: rgba(62, 69, 125, 0.15);
+  --vj-green-gradient: linear-gradient(-45deg, #52b149 0%, #457d3e 30%);
+  --vj-green-gradient-2: linear-gradient(311deg, #52b149 0%, #457d3e 30%);
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --primary-color: var(--vj-green-primary);
+  --secondary-color: var(--vj-green-secondary);
+  --accent-color: var(--vj-green-accent);
+  --hover-color: var(--vj-green-hover);
+  --text-color: var(--vj-green-text);
+  --background-color: var(--vj-green-bg);
+  --panel-background: var(--vj-green-panel);
+  --sidebar-background: var(--vj-green-sidebar);
+  --border-color: var(--vj-green-border);
+  --shadow-color: var(--vj-green-shadow);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --primary-color: var(--vj-green-primary);
+  --secondary-color: var(--vj-green-secondary);
+  --accent-color: var(--vj-green-accent);
+  --hover-color: var(--vj-green-hover);
+  --text-color: var(--vj-green-text);
+  --background-color: var(--vj-green-bg);
+  --panel-background: var(--vj-green-panel);
+  --sidebar-background: var(--vj-green-sidebar);
+  --border-color: var(--vj-green-border);
+  --shadow-color: var(--vj-green-shadow);
+}

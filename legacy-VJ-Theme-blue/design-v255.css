@@ -1,0 +1,57 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: legacy-VJ-Theme-blue */
+
+:root {
+  --bt-background-color: -webkit-linear-gradient(-45deg, #4979b1 0%, #3f3e7d 30%);
+  --bt-background-color-2: -webkit-linear-gradient(311deg, #4979b1 0%, #3f3e7d 30%);
+  --first-color: #423e7d;
+  --second-color: #4a3e7d6e;
+  --icon-color: #0b003c;
+  --third-color: #494396;
+  --c100-color: #473e7d45;
+  --panel-text-color: #5346a0;
+  --vj-blue-primary: #423e7d;
+  --vj-blue-secondary: #494396;
+  --vj-blue-accent: #4979b1;
+  --vj-blue-hover: #5346a0;
+  --vj-blue-text: #0b003c;
+  --vj-blue-bg: #ffffff;
+  --vj-blue-panel: #ffffff;
+  --vj-blue-sidebar: #ffffff;
+  --vj-blue-border: #4a3e7d6e;
+  --vj-blue-shadow: rgba(62, 69, 125, 0.15);
+  --vj-blue-gradient: linear-gradient(-45deg, #4979b1 0%, #3f3e7d 30%);
+  --vj-blue-gradient-2: linear-gradient(311deg, #4979b1 0%, #3f3e7d 30%);
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --primary-color: var(--vj-blue-primary);
+  --secondary-color: var(--vj-blue-secondary);
+  --accent-color: var(--vj-blue-accent);
+  --hover-color: var(--vj-blue-hover);
+  --text-color: var(--vj-blue-text);
+  --background-color: var(--vj-blue-bg);
+  --panel-background: var(--vj-blue-panel);
+  --sidebar-background: var(--vj-blue-sidebar);
+  --border-color: var(--vj-blue-border);
+  --shadow-color: var(--vj-blue-shadow);
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --primary-color: var(--vj-blue-primary);
+  --secondary-color: var(--vj-blue-secondary);
+  --accent-color: var(--vj-blue-accent);
+  --hover-color: var(--vj-blue-hover);
+  --text-color: var(--vj-blue-text);
+  --background-color: var(--vj-blue-bg);
+  --panel-background: var(--vj-blue-panel);
+  --sidebar-background: var(--vj-blue-sidebar);
+  --border-color: var(--vj-blue-border);
+  --shadow-color: var(--vj-blue-shadow);
+}

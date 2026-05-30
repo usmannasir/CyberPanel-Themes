@@ -5,29 +5,52 @@
 
 /* Theme: Ragnarock */
 
+:root {
+  --primary: #003049;
+  --secondary: #f77f00;
+  --accent: #d62828;
+  --background: #eae2b7;
+  --background-light: #f6efca;
+  --highlight: #fdc85e;
+  --text-muted: #8da0aa;
+  --border-light: #d3cb87f2;
+  --white: #ffffff;
+  --ragnarock-primary: #003049;
+  --ragnarock-secondary: #f77f00;
+  --ragnarock-accent: #d62828;
+  --ragnarock-hover: #fdc85e;
+  --ragnarock-text: #003049;
+  --ragnarock-bg: #eae2b7;
+  --ragnarock-panel: #f6efca;
+  --ragnarock-sidebar: #003049;
+  --ragnarock-border: #d3cb87f2;
+  --ragnarock-shadow: rgba(17, 17, 26, 0.1);
+}
+
 :root:not([data-theme="dark"]),
 [data-theme="light"] {
-  --accent-color: #ef4444;
-  --accent-hover: #dc2626;
-  --bg-primary: #fef2f2;
-  --bg-secondary: #ffffff;
-  --bg-sidebar: #f6f7fc;
-  --bg-hover: #eceefb;
-  --border-color: #e9ebf4;
+  --primary-color: var(--ragnarock-primary);
+  --secondary-color: var(--ragnarock-secondary);
+  --accent-color: var(--ragnarock-accent);
+  --hover-color: var(--ragnarock-hover);
+  --text-color: var(--ragnarock-text);
+  --background-color: var(--ragnarock-bg);
+  --panel-background: var(--ragnarock-panel);
+  --sidebar-background: var(--ragnarock-sidebar);
+  --border-color: var(--ragnarock-border);
+  --shadow-color: var(--ragnarock-shadow);
 }
 
 html[data-theme="dark"],
 [data-theme="dark"] {
-  --accent-color: #ef4444;
-  --accent-hover: #dc2626;
-  --bg-primary: #1a0a0a;
-  --bg-secondary: #1d1f26;
-  --bg-sidebar: #191a20;
-  --bg-sidebar-item: #23252d;
-  --bg-hover: #272a33;
-  --bg-muted: #1d1f26;
-  --border-color: #2c2f39;
-  --text-primary: #e4e4e7;
-  --text-secondary: #9aa1ad;
-  --text-heading: #f3f4f6;
+  --primary-color: var(--ragnarock-primary);
+  --secondary-color: var(--ragnarock-secondary);
+  --accent-color: var(--ragnarock-accent);
+  --hover-color: var(--ragnarock-hover);
+  --text-color: var(--ragnarock-text);
+  --background-color: var(--ragnarock-bg);
+  --panel-background: var(--ragnarock-panel);
+  --sidebar-background: var(--ragnarock-sidebar);
+  --border-color: var(--ragnarock-border);
+  --shadow-color: var(--ragnarock-shadow);
 }

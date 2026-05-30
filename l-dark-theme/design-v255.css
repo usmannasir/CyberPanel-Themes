@@ -1,33 +1,35 @@
 /* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
-   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets #page-sidebar (pre-2.4.8).
    Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
 */
 
-/* Theme: l-dark-theme */
+/* Theme: l-dark-theme (approximation for v2.5.5-dev shell) */
 
 :root:not([data-theme="dark"]),
 [data-theme="light"] {
-  --accent-color: #5856d6;
-  --accent-hover: #4644c0;
-  --bg-primary: #f0f0ff;
-  --bg-secondary: #ffffff;
-  --bg-sidebar: #f6f7fc;
-  --bg-hover: #eceefb;
-  --border-color: #e9ebf4;
+  --accent-color: #07df07;
+  --accent-hover: #05b805;
+  --bg-primary: #141414;
+  --bg-secondary: #222222;
+  --bg-sidebar: #000000;
+  --bg-hover: #323232;
+  --border-color: #383d42;
+  --text-primary: #ffffff;
+  --text-secondary: #e9e9ff;
 }
 
 html[data-theme="dark"],
 [data-theme="dark"] {
-  --accent-color: #5856d6;
-  --accent-hover: #4644c0;
-  --bg-primary: #16162e;
-  --bg-secondary: #1d1f26;
-  --bg-sidebar: #191a20;
-  --bg-sidebar-item: #23252d;
-  --bg-hover: #272a33;
-  --bg-muted: #1d1f26;
-  --border-color: #2c2f39;
-  --text-primary: #e4e4e7;
-  --text-secondary: #9aa1ad;
-  --text-heading: #f3f4f6;
+  --accent-color: #07df07;
+  --accent-hover: #05b805;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-sidebar: #000000;
+  --bg-sidebar-item: #1a1a1a;
+  --bg-hover: #323232;
+  --bg-muted: #1c1c1c;
+  --border-color: #383d42;
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0c0;
+  --text-heading: #ffffff;
 }

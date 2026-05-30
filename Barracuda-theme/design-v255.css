@@ -5,29 +5,37 @@
 
 /* Theme: Barracuda-theme */
 
+:root {
+  --barracuda-bg-primary: #0d0e12;
+  --barracuda-bg-secondary: #1a1c21;
+  --barracuda-bg-sidebar: #0d0e12;
+  --barracuda-text-primary: #ffffff;
+  --barracuda-text-secondary: #babac0;
+  --barracuda-accent: #6495ED;
+  --barracuda-border: #393E46;
+  --barracuda-hover: #26272f;
+}
+
 :root:not([data-theme="dark"]),
 [data-theme="light"] {
-  --accent-color: #14b8a6;
-  --accent-hover: #0d9488;
-  --bg-primary: #f0fdfa;
-  --bg-secondary: #ffffff;
-  --bg-sidebar: #f6f7fc;
-  --bg-hover: #eceefb;
-  --border-color: #e9ebf4;
+  --bg-primary: var(--barracuda-bg-primary);
+  --bg-secondary: var(--barracuda-bg-secondary);
+  --bg-sidebar: var(--barracuda-bg-sidebar);
+  --text-primary: var(--barracuda-text-primary);
+  --text-secondary: var(--barracuda-text-secondary);
+  --accent-color: var(--barracuda-accent);
+  --border-color: var(--barracuda-border);
+  --bg-hover: var(--barracuda-hover);
 }
 
 html[data-theme="dark"],
 [data-theme="dark"] {
-  --accent-color: #14b8a6;
-  --accent-hover: #0d9488;
-  --bg-primary: #0f172a;
-  --bg-secondary: #1d1f26;
-  --bg-sidebar: #191a20;
-  --bg-sidebar-item: #23252d;
-  --bg-hover: #272a33;
-  --bg-muted: #1d1f26;
-  --border-color: #2c2f39;
-  --text-primary: #e4e4e7;
-  --text-secondary: #9aa1ad;
-  --text-heading: #f3f4f6;
+  --bg-primary: var(--barracuda-bg-primary);
+  --bg-secondary: var(--barracuda-bg-secondary);
+  --bg-sidebar: var(--barracuda-bg-sidebar);
+  --text-primary: var(--barracuda-text-primary);
+  --text-secondary: var(--barracuda-text-secondary);
+  --accent-color: var(--barracuda-accent);
+  --border-color: var(--barracuda-border);
+  --bg-hover: var(--barracuda-hover);
 }
