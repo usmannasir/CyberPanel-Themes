@@ -1,0 +1,33 @@
+/* CyberPanel v2.5.5-dev theme pack — paste into Design > Main Dashboard CSS
+   Requires cyberpanel-ui.css (v2.4.8+ shell). Legacy design.css targets the old sidebar DOM only.
+   Toggle dark/light with the header moon/sun button (localStorage: cyberPanelTheme).
+*/
+
+/* Theme: CyberSpace-Dark-By-Interpryce */
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  --accent-color: #00d4ff;
+  --accent-hover: #00a8cc;
+  --bg-primary: #f0f9ff;
+  --bg-secondary: #ffffff;
+  --bg-sidebar: #f6f7fc;
+  --bg-hover: #eceefb;
+  --border-color: #e9ebf4;
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --accent-color: #00d4ff;
+  --accent-hover: #00a8cc;
+  --bg-primary: #0a0e17;
+  --bg-secondary: #1d1f26;
+  --bg-sidebar: #191a20;
+  --bg-sidebar-item: #23252d;
+  --bg-hover: #272a33;
+  --bg-muted: #1d1f26;
+  --border-color: #2c2f39;
+  --text-primary: #e4e4e7;
+  --text-secondary: #9aa1ad;
+  --text-heading: #f3f4f6;
+}
