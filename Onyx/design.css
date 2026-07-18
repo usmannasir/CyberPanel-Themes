@@ -1,0 +1,79 @@
+/* Formerly named "l-dark-theme" — renamed because every theme now ships
+   both a light and a dark palette (the panel mode toggle picks one). */
+/*
+    Name: L Dark Theme
+    A near-black theme: pure black sidebar, #141414 page, charcoal
+    cards, white text, bright green (#07df07) as the only pop color.
+    (Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors no longer exist in the panel.)
+*/
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f5f7f5;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #edf5ed;
+    --bg-hover: #e9ede9;
+    --bg-muted: #f2f5f2;
+    --bg-code: #edf0ed;
+    --text-primary: #252d25;
+    --text-secondary: #536553;
+    --text-heading: #171c17;
+    --accent-color: #047c04;
+    --accent-hover: #035403;
+    --text-on-accent: #ffffff;
+    --focus-ring: #047c04;
+    --border-color: #d8dfd8;
+    --table-head-bg: #047c04;
+    --table-head-text: #ffffff;
+    --sidebar-text: #244224;
+    --sidebar-text-muted: #3b6d3b;
+    --sidebar-section-bg: #047c04;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d7ead7;
+    --sidebar-item-hover-text: #1b321b;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #047c04;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #141414;
+    --bg-secondary: #222222;
+    --bg-sidebar: #000000;
+    --bg-hover: #2c2b2b;
+    --bg-muted: #1c1c1c;
+    --bg-code: #100f0f;
+    --text-primary: #ffffff;
+    --text-secondary: #c9c9e2;
+    --text-heading: #e9e9ff;
+    --accent-color: #07df07;
+    --accent-hover: #0bc00b;
+    --text-on-accent: #062406;
+    --focus-ring: #07df07;
+    --border-color: #383d42;
+    --table-head-bg: #282727;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #e9e9ff;
+    --sidebar-section-bg: #000000;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #323232;
+    --sidebar-item-hover-text: #ffffff;
+    --sidebar-item-active-text: #4c4c4c;
+    --sidebar-item-active-text: #4c4c4c;
+    --border-soft: #2a2d31;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #efefef;
+}

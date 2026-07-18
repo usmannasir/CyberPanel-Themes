@@ -1,0 +1,83 @@
+/* Formerly named "dark-theme" — renamed because every theme now ships
+   both a light and a dark palette (the panel mode toggle picks one). */
+/*
+    Name: Dark Theme
+    Author: eozgun - https://github.com/eozgun/cyberpanel-design
+    License: same as the CyberPanel repo (https://github.com/usmannasir/cyberpanel/)
+    Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors no longer exist in the panel. Original surface
+    hues (#151516 / #18191a / #202124), near-invisible #212327 borders
+    and the flat, border-on-hover character are preserved.
+*/
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f5f5f7;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #ededf5;
+    --bg-hover: #e9e9ed;
+    --bg-muted: #f2f2f5;
+    --bg-code: #ededf0;
+    --text-primary: #25252d;
+    --text-secondary: #535365;
+    --text-heading: #17171c;
+    --accent-color: #615ed8;
+    --accent-hover: #413dd0;
+    --text-on-accent: #ffffff;
+    --focus-ring: #615ed8;
+    --border-color: #d8d8df;
+    --table-head-bg: #615ed8;
+    --table-head-text: #ffffff;
+    --sidebar-text: #242442;
+    --sidebar-text-muted: #3c3b6d;
+    --sidebar-section-bg: #615ed8;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d8d7ea;
+    --sidebar-item-hover-text: #1b1b32;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #615ed8;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #151516;
+    --bg-secondary: #18191a;
+    --bg-sidebar: #151516;
+    --bg-hover: #202124;
+    --bg-muted: #202124;
+    --bg-code: #202124;
+    --text-primary: #d9d9d9;
+    --text-secondary: #858c99;
+    --text-heading: #ececec;
+    --accent-color: #817fe0;
+    --accent-hover: #9a98e8;
+    --text-on-accent: #1f1f1f;
+    --focus-ring: #605ed8;
+    --border-color: #212327;
+    --table-head-bg: #202124;
+    --table-head-text: #bbbbbb;
+    --sidebar-text: #d7d7d9;
+    --sidebar-text-muted: #a9aaad;
+    --sidebar-section-bg: #18191a;
+    --sidebar-section-text: #bbbbbb;
+    --sidebar-item-hover-bg: #202124;
+    --sidebar-item-hover-text: #d7d7d9;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
+    --skeleton-base: #202124;
+    --skeleton-shine: #2b2c30;
+    --border-soft: #1c1d20;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
+}

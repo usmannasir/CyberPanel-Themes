@@ -1,0 +1,106 @@
+/* Formerly named "CyberSpace-Dark-By-Interpryce" — renamed because every theme now ships
+   both a light and a dark palette (the panel mode toggle picks one). */
+/**********************************************************
+|  Name: CyberSpace Dark
+|  Author: InterPryce Technology (https://interpryce.com)
+|  Version: 1.5.0
+|  Updated: 05/28/2024
+|  License: GNU - GPLv3
+|
+|  Ported to the CyberPanel 2.4 design-token system; the
+|  original old-UI selectors (#page-header, #sidebar-menu,
+|  .content-box, ...) no longer exist in the panel. The
+|  remote space-background image and logo were dropped;
+|  the deep blue-dark base color stands in for them.
+|
+***********************************************************/
+
+/* Original theme palette, kept for provenance */
+
+
+
+
+textarea {
+    font-family: monospace;
+}
+
+
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --color-primary: #00a1a9;
+    --color-secondary: #059b82;
+    --color-blue: #1aabe1;
+    --color-blue-2: #00a0c5;
+    --color-blue-3: #3da6ff;
+    --color-blue-dark: #031521;
+    --color-bg-blue: #002a43;
+    --color-red: #f02769;
+    --color-red-2: #910000;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f5f7f7;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #edf2f5;
+    --bg-hover: #e9eced;
+    --bg-muted: #f2f5f5;
+    --bg-code: #edf0f0;
+    --text-primary: #252c2d;
+    --text-secondary: #536465;
+    --text-heading: #171c1c;
+    --accent-color: #007a80;
+    --accent-hover: #005357;
+    --text-on-accent: #ffffff;
+    --focus-ring: #007a80;
+    --border-color: #d8dfdf;
+    --table-head-bg: #007a80;
+    --table-head-text: #ffffff;
+    --sidebar-text: #243542;
+    --sidebar-text-muted: #3b586d;
+    --sidebar-section-bg: #007a80;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d7e2ea;
+    --sidebar-item-hover-text: #1b2832;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #007a80;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #031521;
+    --bg-secondary: #041d2d;
+    --bg-sidebar: #01090f;
+    --bg-hover: #002a43;
+    --bg-muted: #002a43;
+    --bg-code: #01090f;
+    --text-primary: #ffffff;
+    --text-secondary: #c3d3dc;
+    --text-heading: #ffffff;
+    --accent-color: #00a1a9;
+    --accent-hover: #059b82;
+    --text-on-accent: #031521;
+    --focus-ring: #1aabe1;
+    --border-color: #1f384c;
+    --table-head-bg: #01121c;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #9fb3bf;
+    --sidebar-section-bg: #002a43;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #002a43;
+    --sidebar-item-hover-text: #ffffff;
+    --sidebar-item-active-text: #292929;
+    --sidebar-item-active-text: #292929;
+    --border-soft: #142a3b;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
+}

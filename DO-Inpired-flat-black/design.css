@@ -1,103 +1,87 @@
 /*
     Name: FLAT BLACK
-    Version: 1.2
+    Version: 2.0 (ported to the CyberPanel 2.4 design-token system;
+             original old-UI selectors no longer exist in the panel)
     Author: CypherPotato
-
-    Tested on CyberPanel 2.3 build 1
     Served with APACHE-2.0 license
-
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
 */
-
-:root {
-    --theme-color-0: #111;
-    --theme-color-1: #000;
-    --theme-color-2: #222;
-    --theme-color-3: #333;
-}
 
 textarea {
     font-family: monospace;
 }
-#sidebar-menu-item-server-ip-address span {
-    color: white !important;
-    font-weight: 400 !important;
-}
-#sidebar-menu-item-server-ip-address span:before {
-    content: "Logged at ";
-}
-h1, h2, h3, h4, h5, h6,
-#page-title > h2,
-#page-title > p {
+
+h1, h2, h3, h4, h5, h6 {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
 }
+
 .btn:not(.toggle) {
-    border-width: 0px;
-}
-.btn-primary {
-    border-width: 0px;
-    background-color: var(--theme-color-1);
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active:focus {
-    background: var(--theme-color-2);
-    background-color: var(--theme-color-2);
-}
-.btn-primary:active {
-    background-color: var(--theme-color-3);
-}
-#header-nav-right .header-btn {
-    border-color: rgba(0, 0, 0, 0.2);
-}
-#header-nav-right .header-btn:hover {
-    border-color: var(--theme-color-1);
-}
-#header-nav-right .header-btn i {
-    color: #222 !important;
-}
-#page-header {
-    background: white;
-}
-.sidebar-submenu {
-    margin: 0px !important;
-}
-.sidebar-submenu li {
-    background-color: var(--theme-color-2);
-    list-style: none;
-}
-#page-sidebar li ul li a:before {
-    display: none !important;
-}
-#sidebar-menu li .sidebar-submenu ul li a:hover,#sidebar-menu li .sidebar-submenu ul li a.sfActive {
-    background-color: var(--theme-color-3);
-}
-#sidebar-menu li .sidebar-submenu ul li, #sidebar-menu li .sidebar-submenu {
-    border-width: 0px;
-}
-#sidebar-menu, #header-logo {
-    background: var(--theme-color-1);
-    padding: 0;
-}
-#sidebar-menu > li > a, #page-sidebar li ul li a {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-width: 0;
-    color: white !important;
-    padding: 0px 15px;
-    font-size: 14px;
 }
-#page-sidebar ul li.header {
-    color: white !important;
-    padding: 20px 15px;
-    margin: 0;
-    border-top: 1px solid var(--theme-color-0);
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --theme-color-0: #111111;
+    --theme-color-1: #000000;
+    --theme-color-2: #222222;
+    --theme-color-3: #333333;
 }
-#page-sidebar ul li.divider {
-    display: none;
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f4f5f9;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #eff1f3;
+    --bg-hover: #e9ebf3;
+    --bg-muted: #f4f5f9;
+    --bg-code: #d8dcea;
+    --text-primary: #24292f;
+    --text-secondary: #57606a;
+    --text-heading: #1b1f24;
+    --accent-color: #24292f;
+    --accent-hover: #000000;
+    --text-on-accent: #ffffff;
+    --focus-ring: #57606a;
+    --border-color: #dfe2ea;
+    --table-head-bg: #24292f;
+    --table-head-text: #ffffff;
+    --sidebar-text: #2c323a;
+    --sidebar-text-muted: #49535f;
+    --sidebar-section-bg: #24292f;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #dce0e4;
+    --sidebar-item-hover-text: #21262b;
+    --sidebar-item-active-bg: #24292f;
+    --sidebar-item-active-text: #ffffff;
 }
-#sidebar-menu > li > a:hover {
-    background-color: var(--theme-color-2);
-}
-#page-sidebar ul li a .glyph-icon {
-    display: none;
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #14171a;
+    --bg-secondary: #1b1e23;
+    --bg-sidebar: #111316;
+    --bg-hover: #262b31;
+    --bg-muted: #1b1e23;
+    --bg-code: #21262b;
+    --text-primary: #e3e5e8;
+    --text-secondary: #acb2b9;
+    --text-heading: #f1f2f3;
+    --accent-color: #7b899a;
+    --accent-hover: #929eac;
+    --text-on-accent: #101010;
+    --focus-ring: #7b899a;
+    --border-color: #353c45;
+    --table-head-bg: #7b899a;
+    --table-head-text: #101010;
+    --sidebar-text: #acb2b9;
+    --sidebar-text-muted: #acb2b9;
+    --sidebar-section-bg: #7b899a;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #262b31;
+    --sidebar-item-hover-text: #e3e5e8;
+    --sidebar-item-active-text: #101010;
+    --sidebar-item-active-bg: #7b899a;
+    --sidebar-item-active-text: #101010;
 }

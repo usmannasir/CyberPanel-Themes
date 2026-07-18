@@ -6,28 +6,6 @@
    Tested on: CyberPanel 2.4 build 4
    ========================================================================== */
 
-:root {
-    /* 1. BRAND COLORS */
-    --vj-main: #7d3e6f;
-    --vj-light: #b14949;
-    --vj-grad: linear-gradient(135deg, #b14949 0%, #7d3e6f 100%);
-
-    /* 2. LIGHT MODE SYSTEM OVERRIDES */
-    --bg-primary: #f0f0ff !important;
-    --bg-secondary: #ffffff !important;
-    --bg-sidebar: #fdfafd !important;
-    --bg-sidebar-item: #ffffff !important;
-    --text-primary: #3c002f !important;
-    --accent-color: var(--vj-main) !important;
-    --accent-hover: var(--vj-light) !important;
-    --border-color: rgba(125, 62, 111, 0.15) !important;
-    --shadow-color: rgba(125, 62, 111, 0.1) !important;
-    --ai-banner-bg: var(--vj-grad) !important;
-    --bg-hover: rgba(125, 62, 111, 0.08) !important;
-    --active-shadow: rgba(125, 62, 111, 0.4) !important;
-    --text-inverse: #ffffff !important;
-}
-
 #sidebar .menu-item.active {
     box-shadow: 0 3px 10px var(--active-shadow) !important;
 }
@@ -35,25 +13,6 @@
 /* ==========================================================================
    3. DARK MODE OVERRIDES (DEEP PURPLE)
    ========================================================================== */
-[data-theme="dark"] {
-    --vj-dark-bg: #150d14;
-    --vj-card-bg: #241822;
-    --vj-accent: #d689bd;
-    --vj-text: #eee4eb;
-    --vj-border: #3d2638;
-
-    --bg-primary: var(--vj-dark-bg) !important;
-    --bg-secondary: var(--vj-card-bg) !important;
-    --bg-sidebar: #1a0f18 !important;
-    --bg-sidebar-item: #2a1b27 !important;
-    --text-primary: var(--vj-text) !important;
-    --text-secondary: #a08a99 !important;
-    --accent-color: #b14949 !important;
-    --border-color: var(--vj-border) !important;
-    --shadow-color: rgba(0, 0, 0, 0.5) !important;
-    --ai-banner-bg: linear-gradient(135deg, #4a2b42 0%, #241822 100%) !important;
-    --bg-hover: rgba(255, 255, 255, 0.06) !important;
-}
 
 /* ==========================================================================
    4. LOGIN PAGE STYLES
@@ -255,4 +214,65 @@ h1#loginFormTitle,
     box-shadow: 0 4px 12px var(--active-shadow) !important;
     color: var(--text-inverse) !important;
     transform: translateY(-1px) !important;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --vj-main: #7d3e6f;
+    --vj-light: #b14949;
+    --vj-grad: linear-gradient(135deg, #b14949 0%, #7d3e6f 100%);
+    --bg-sidebar-item: #ffffff;
+    --shadow-color: rgba(125, 62, 111, 0.1);
+    --ai-banner-bg: var(--vj-grad);
+    --active-shadow: rgba(125, 62, 111, 0.4);
+    --text-inverse: #ffffff;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f0f0ff;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #fdfafd;
+    --bg-hover: rgba(125, 62, 111, 0.08);
+    --bg-muted: #f0f0ff;
+    --bg-code: #c5c5ff;
+    --text-primary: #3c002f;
+    --text-secondary: #3c002f;
+    --text-heading: #3c002f;
+    --accent-color: #7d3e6f;
+    --accent-hover: #b14949;
+    --text-on-accent: #ecedf0;
+    --focus-ring: #b14949;
+    --border-color: rgba(125, 62, 111, 0.15);
+    --table-head-bg: #7d3e6f;
+    --table-head-text: #ecedf0;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #1b1319;
+    --bg-secondary: #241922;
+    --bg-sidebar: #171015;
+    --bg-hover: #332430;
+    --bg-muted: #241922;
+    --bg-code: #2d1f2a;
+    --text-primary: #e8e3e7;
+    --text-secondary: #b9acb6;
+    --text-heading: #f3f1f3;
+    --accent-color: #b66ba5;
+    --accent-hover: #c386b6;
+    --text-on-accent: #101010;
+    --focus-ring: #b66ba5;
+    --border-color: #483243;
+    --table-head-bg: #b66ba5;
+    --table-head-text: #101010;
+    --sidebar-text: #b9acb6;
+    --sidebar-text-muted: #b9acb6;
+    --sidebar-section-bg: #b66ba5;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #332430;
+    --sidebar-item-hover-text: #e8e3e7;
+    --sidebar-item-active-text: #191919;
+    --sidebar-item-active-text: #191919;
 }

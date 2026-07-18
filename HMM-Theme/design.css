@@ -9,311 +9,95 @@
     Served with APACHE-2.0 license
 
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+
+    Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors (#page-header, #sidebar-menu, .header-btn, ...)
+    no longer exist in the panel.
 */
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-html {
-scroll-behaviour: smooth !important;
-}
-:root {
---theme-color-0: #1679ab;
---theme-color-1: #050c9c;
---theme-color-2: #111111;
---theme-color-3: #101052;
-}
-::-webkit-scrollbar {
-width: 6px;
-}
-::-webkit-scrollbar-track {
-background: #f2f2f2;
-}
-::-webkit-scrollbar-thumb {
-background: var(--theme-color-1);
-border-radius: 10px;
-cursor: default;
-}
-::-webkit-scrollbar-thumb:hover {
-background: var(--theme-color-1);
-}
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* Original theme palette, kept for provenance */
+
+
+
+
 body {
-font-family: "Be Vietnam Pro", sans-serif !important;
-font-weight: 400 !important;
-font-size: 15px !important;
-transition: all 0.3s ease;
-background: #fff7fc !important;
+    font-family: "Be Vietnam Pro", sans-serif;
 }
-#page-content {
-background: #fff7fc !important;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
 }
-p,
-a,
-b,
-strong,
-input,
+
 textarea {
-font-family: "Be Vietnam Pro", sans-serif !important;
-font-size: 15px !important;
-color: #292929 !important;
+    font-family: "Source Code Pro", monospace;
 }
-#page-title > p {
-font-size: 17px !important;
-margin-top: 13px !important;
+
+
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --theme-color-0: #1679ab;
+    --theme-color-1: #050c9c;
+    --theme-color-2: #111111;
+    --theme-color-3: #101052;
+    --shadow-color: rgba(17, 17, 17, 0.08);
 }
-.toggle.btn {
-border-radius: 50px !important;
-font-family: "Be Vietnam Pro", sans-serif !important;
-font-size: 15px !important;
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #fff7fc;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #ffffff;
+    --bg-hover: #f2f2f2;
+    --bg-muted: #fafbfc;
+    --bg-code: #f2f2f2;
+    --text-primary: #292929;
+    --text-secondary: #595959;
+    --text-heading: #1a2130;
+    --accent-color: #050c9c;
+    --accent-hover: #111111;
+    --text-on-accent: #ffffff;
+    --focus-ring: #050c9c;
+    --border-color: #cecece;
+    --table-head-bg: #f2f2f2;
+    --table-head-text: #1a2130;
+    --sidebar-text: #292929;
+    --sidebar-text-muted: #595959;
+    --sidebar-section-bg: #ffffff;
+    --sidebar-section-text: #050c9c;
+    --sidebar-item-hover-bg: #f2f2f2;
+    --sidebar-item-hover-text: #050c9c;
+    --border-soft: #f2f2f2;
 }
-button.btn:not(.btn-link),
-a.btn:not(.btn-link) {
-display: flex;
-border-radius: 10px !important;
-outline: 0 !important;
-cursor: pointer;
-min-height: 42px !important;
-height: 42px !important;
-max-height: 42px !important;
-min-width: 140px !important;
-color: #fff !important;
-font-family: "Be Vietnam Pro", sans-serif !important;
-font-size: 15px !important;
-align-content: center;
-justify-content: center;
-align-items: center;
-}
-textarea,
-input,
-select {
-border: 1.5px solid #cecece !important;
-background: #fafbfc !important;
-padding: 10px 15px !important;
-min-height: 42px !important;
-border-radius: 10px !important;
-}
-textarea:focus,
-input:focus {
-border-color: var(--theme-color-1) !important;
-box-shadow: none !important;
-}
-#sidebar-menu-item-server-ip-address span {
-color: #000 !important;
-font-weight: 600 !important;
-}
-#sidebar-menu-item-server-ip-address span:before {
-content: "IP - ";
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-#page-title > h2 {
-font-family: "Outfit", sans-serif !important;
-font-weight: 700 !important;
-color: #1a2130 !important;
-}
-.btn:not(.toggle) {
-border-width: 0px;
-}
-.btn-primary {
-border-width: 0px;
-background-color: var(--theme-color-1);
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active:focus {
-background-color: var(--theme-color-2);
-outline: 0 !important;
-}
-.btn-primary:active {
-background-color: var(--theme-color-3);
-}
-#header-nav-right .header-btn {
-border-color: rgba(0, 0, 0, 0.2);
-border-radius: 100px !important;
-background: #fff !important;
-transition: all 0.3s ease;
-}
-#header-nav-right .header-btn:hover {
-border-color: var(--theme-color-1);
-}
-#header-nav-right .header-btn i {
-color: #222 !important;
-}
-#page-header {
-background: white;
-}
-.sidebar-submenu {
-margin: 0px !important;
-}
-.sidebar-submenu li {
-list-style: none;
-margin: 3px 0 !important;
-transition: all 0.3s ease;
-}
-#page-sidebar li ul li a:before {
-display: none !important;
-}
-#header-logo {
-background: var(--theme-color-1);
-padding: 0;
-}
-#sidebar-menu > li > a {
-border-width: 0;
-color: black !important;
-padding: 8px 20px;
-font-size: 15px !important;
-}
-#page-sidebar li ul li a {
-font-size: 13.5px !important;
-}
-#page-sidebar ul li.header {
-color: var(--theme-color-1) !important;
-padding: 20px 15px !important;
-margin: 30px -10px 0px -10px !important;
-border-top: 1.5px solid #f2f2f2 !important;
-border-radius: 0px !important;
-background: transparent !important;
-}
-#page-sidebar ul li.divider {
-display: none !important;
-}
-#page-sidebar ul li a .glyph-icon {
-display: none !important;
-}
-#sidebar-menu li {
-padding: 5px 15px !important;
-border-radius: 10px !important;
-}
-#sidebar-menu li a {
-padding: unset !important;
-text-decoration: none !important;
-font-weight: 600 !important;
-}
-#sidebar-menu li:hover,
-#sidebar-menu li.sfHover,
-#page-sidebar li:nth-child(2):not([class]) {
-background: #f2f2f2 !important;
-cursor: pointer !important;
-}
-#sidebar-menu {
-background: #fff !important;
-border-right: 1.5px solid #cecece !important;
-padding: 0 10px !important;
-}
-.sidebar-submenu {
-padding: 10px 0 5px 0 !important;
-background: #f2f2f2 !important;
-border-radius: 10px !important;
-margin: 0 !important;
-border: none !important;
-}
-#sidebar-menu .sidebar-submenu ul li a {
-text-decoration: none !important;
-border: none !important;
-color: #292929 !important;
-background: transparent !important;
-font-weight: 400 !important;
-}
-#sidebar-menu .sidebar-submenu ul li {
-padding: 2px 0px !important;
-transition: all 0.2s ease;
-border: none !important;
-border-radius: 0px !important;
-}
-#sidebar-menu .sidebar-submenu ul li:hover {
-background: var(--theme-color-1) !important;
-border-radius: 0px !important;
-padding: 2px 15px !important;
-color: #fff !important;
-margin: 0 -15px !important;
-}
-#sidebar-menu li .sidebar-submenu > ul > li > a.sfActive {
-background: var(--theme-color-1) !important;
-border-radius: 0px !important;
-padding: 3px 15px !important;
-color: #fff !important;
-height: 38px !important;
-margin: 0 -15px !important;
-transition: all 0.2s ease;
-}
-#sidebar-menu .sidebar-submenu li:hover a {
-color: #fff !important;
-}
-.scroll-sidebar {
-margin-top: -30px !important;
-}
-.tile-box-shortcut {
-color: #fff !important;
-border-radius: 10px;
-transition: all 0.3s ease;
-font-size: 18px !important;
-font-weight: 600 !important;
-}
-.tile-box-shortcut:hover {
-transform: scale(1.03);
-}
-.panel {
-border-radius: 10px !important;
-border: 1px solid #cecece !important;
-padding: 0 !important;
-}
-.panel-body {
-padding: 15px !important;
-}
-.content-box-header {
-padding: 15px !important;
-font-size: 16px !important;
-margin: unset !important;
-}
-body .panel .panel-body p:first-child {
-padding: 0 0 0 7px !important;
-}
-.tile-box-shortcut .tile-header {
-font-weight: 600 !important;
-left: 2.75em !important;
-bottom: -4px !important;
-display: block !important;
-}
-#close-sidebar .icon-angle-left {
-color: #fff !important;
-}
-.alert {
-border-radius: 8px !important;
-padding: 10px 15px !important;
-margin-bottom: 35px !important;
-}
-textarea[id="appendthemedata"] {
-font-family: "Source Code Pro", monospace !important;
-min-height: 550px !important;
-}
-#page-title {
-padding: 0 0 25px 10px !important;
-}
-#sidebar-menu > li > a .bs-badge,
-#sidebar-menu > li > a .bs-label {
-right: unset !important;
-left: 137px !important;
-border-radius: 30px !important;
-}
-h2[ng-bind="web.domain"] {
-font-size: 19px !important;
-font-weight: 500 !important;
-transition: all 0.3s ease;
-}
-h2[ng-bind="web.domain"]:hover {
-text-decoration: underline !important;
-}
-.logo-content-big {
-background: url("https://cyberpanel.net/wp-content/uploads/2024/01/logo.svg") !important;
-background-size: contain !important;
-background-repeat: no-repeat !important;
-height: 48px !important;
-top: 38% !important;
-}
-.panel-body a .h4:hover {
-text-decoration: underline !important;
-}
-select[ng-model="branchSelect"] {
-color: inherit !important;
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13131b;
+    --bg-secondary: #191a24;
+    --bg-sidebar: #101017;
+    --bg-hover: #242433;
+    --bg-muted: #191a24;
+    --bg-code: #1f202d;
+    --text-primary: #e3e4e8;
+    --text-secondary: #acadb9;
+    --text-heading: #f1f2f3;
+    --accent-color: #7379fa;
+    --accent-hover: #9a9ffb;
+    --text-on-accent: #101010;
+    --focus-ring: #7379fa;
+    --border-color: #323348;
+    --table-head-bg: #7379fa;
+    --table-head-text: #101010;
+    --sidebar-text: #acadb9;
+    --sidebar-text-muted: #acadb9;
+    --sidebar-section-bg: #7379fa;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242433;
+    --sidebar-item-hover-text: #e3e4e8;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }

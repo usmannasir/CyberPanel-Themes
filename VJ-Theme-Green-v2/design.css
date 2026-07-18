@@ -6,28 +6,6 @@
    Tested on: CyberPanel 2.4 build 4
    ========================================================================== */
 
-:root {
-    /* 1. BRAND COLORS */
-    --vj-main: #3e7d58;
-    --vj-light: #52b149;
-    --vj-grad: linear-gradient(135deg, #52b149 0%, #3e7d58 100%);
-
-    /* 2. LIGHT MODE SYSTEM OVERRIDES */
-    --bg-primary: #f0fff4 !important;
-    --bg-secondary: #ffffff !important;
-    --bg-sidebar: #fafffc !important;
-    --bg-sidebar-item: #ffffff !important;
-    --text-primary: #003c39 !important;
-    --accent-color: var(--vj-main) !important;
-    --accent-hover: var(--vj-light) !important;
-    --border-color: rgba(62, 125, 88, 0.15) !important;
-    --shadow-color: rgba(62, 125, 88, 0.1) !important;
-    --ai-banner-bg: var(--vj-grad) !important;
-    --bg-hover: rgba(62, 125, 88, 0.08) !important;
-    --active-shadow: rgba(62, 125, 88, 0.4) !important;
-    --text-inverse: #ffffff !important;
-}
-
 #sidebar .menu-item.active {
     box-shadow: 0 3px 10px var(--active-shadow) !important;
 }
@@ -35,25 +13,6 @@
 /* ==========================================================================
    3. DARK MODE OVERRIDES (DEEP GREEN)
    ========================================================================== */
-[data-theme="dark"] {
-    --vj-dark-bg: #101a14;
-    --vj-card-bg: #1b2620;
-    --vj-accent: #89d6a3;
-    --vj-text: #e4eee9;
-    --vj-border: #2a3d31;
-
-    --bg-primary: var(--vj-dark-bg) !important;
-    --bg-secondary: var(--vj-card-bg) !important;
-    --bg-sidebar: #131f18 !important;
-    --bg-sidebar-item: #1f2e25 !important;
-    --text-primary: var(--vj-text) !important;
-    --text-secondary: #8aa092 !important;
-    --accent-color: #52b149 !important;
-    --border-color: var(--vj-border) !important;
-    --shadow-color: rgba(0, 0, 0, 0.5) !important;
-    --ai-banner-bg: linear-gradient(135deg, #2b553e 0%, #1b2620 100%) !important;
-    --bg-hover: rgba(255, 255, 255, 0.06) !important;
-}
 
 /* ==========================================================================
    4. LOGIN PAGE STYLES
@@ -255,4 +214,67 @@ h1#loginFormTitle,
     box-shadow: 0 4px 12px var(--active-shadow) !important;
     color: var(--text-inverse) !important;
     transform: translateY(-1px) !important;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --vj-main: #3e7d58;
+    --vj-light: #52b149;
+    --vj-grad: linear-gradient(135deg, #52b149 0%, #3e7d58 100%);
+    --bg-sidebar-item: #ffffff;
+    --shadow-color: rgba(62, 125, 88, 0.1);
+    --ai-banner-bg: var(--vj-grad);
+    --active-shadow: rgba(62, 125, 88, 0.4);
+    --text-inverse: #ffffff;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f0fff4;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #fafffc;
+    --bg-hover: rgba(62, 125, 88, 0.08);
+    --bg-muted: #f0fff4;
+    --bg-code: #c5ffd5;
+    --text-primary: #003c39;
+    --text-secondary: #003c39;
+    --text-heading: #003c39;
+    --accent-color: #3e7d58;
+    --accent-hover: #305f43;
+    --text-on-accent: #ffffff;
+    --focus-ring: #4ba343;
+    --border-color: rgba(62, 125, 88, 0.15);
+    --table-head-bg: #3e7d58;
+    --table-head-text: #f5f5f5;
+    --sidebar-section-text: #f5f5f5;
+    --sidebar-item-hover-text: #5856d6;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #131b16;
+    --bg-secondary: #19241e;
+    --bg-sidebar: #101713;
+    --bg-hover: #24332a;
+    --bg-muted: #19241e;
+    --bg-code: #1f2d25;
+    --text-primary: #e3e8e5;
+    --text-secondary: #acb9b1;
+    --text-heading: #f1f3f2;
+    --accent-color: #4c986b;
+    --accent-hover: #5eaf7f;
+    --text-on-accent: #101010;
+    --focus-ring: #4c986b;
+    --border-color: #32483b;
+    --table-head-bg: #4c986b;
+    --table-head-text: #101010;
+    --sidebar-text: #acb9b1;
+    --sidebar-text-muted: #acb9b1;
+    --sidebar-section-bg: #4c986b;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #24332a;
+    --sidebar-item-hover-text: #e3e8e5;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }

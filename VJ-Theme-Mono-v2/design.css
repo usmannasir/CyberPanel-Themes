@@ -1,3 +1,5 @@
+/* Formerly named "VJ-Theme-Dark-v2" — renamed because every theme now ships
+   both a light and a dark palette (the panel mode toggle picks one). */
 /* ==========================================================================
    Name: VJ-Theme-Dark-v2
    Version: 2.0
@@ -6,34 +8,6 @@
    Tested on: CyberPanel 2.4 build 4
    ========================================================================== */
 
-:root {
-    /* 1. BRAND COLORS */
-    --vj-main: #323232;
-    --vj-light: #5a5a5a;
-    --vj-grad: linear-gradient(135deg, #5a5a5a 0%, #525252 100%);
-
-    /* 2. NORMAL MODE (STANDARD DARK THEME) */
-    /* We override "Light Mode" variables to be Dark to ensure always-dark look */
-    --bg-primary: #1c1c1c !important;
-    --bg-secondary: #2c2c2c !important;
-    --bg-sidebar: #222222 !important;
-    --bg-sidebar-item: #2c2c2c !important;
-    --bg-hover: rgba(255, 255, 255, 0.12) !important;
-
-    /* Force Light Text for Visibility */
-    --text-primary: #e2e2e2 !important;
-    --text-secondary: #aaaaaa !important;
-    --text-heading: #ffffff !important;
-
-    --accent-color: #a0a0a0 !important;
-    --accent-hover: #ffffff !important;
-    --border-color: rgba(255, 255, 255, 0.1) !important;
-    --shadow-color: rgba(0, 0, 0, 0.4) !important;
-    --ai-banner-bg: var(--vj-grad) !important;
-    --active-shadow: rgba(0, 0, 0, 0.5) !important;
-    --text-inverse: #ffffff !important;
-}
-
 #sidebar .menu-item.active {
     box-shadow: 0 3px 10px var(--active-shadow) !important;
 }
@@ -41,25 +15,6 @@
 /* ==========================================================================
    3. DARK MODE OVERRIDES (DEEP DARK / AMOLED STYLE)
    ========================================================================== */
-[data-theme="dark"] {
-    --vj-dark-bg: #000000;
-    --vj-card-bg: #0f0f0f;
-    --vj-accent: #d4d4d4;
-    --vj-text: #ffffff;
-    --vj-border: #333333;
-
-    --bg-primary: var(--vj-dark-bg) !important;
-    --bg-secondary: var(--vj-card-bg) !important;
-    --bg-sidebar: #050505 !important;
-    --bg-sidebar-item: #141414 !important;
-    --text-primary: var(--vj-text) !important;
-    --text-secondary: #888888 !important;
-    --accent-color: #cccccc !important;
-    --border-color: rgba(255, 255, 255, 0.08) !important;
-    --shadow-color: rgba(0, 0, 0, 0.8) !important;
-    --ai-banner-bg: linear-gradient(135deg, #222222 0%, #000000 100%) !important;
-    --bg-hover: rgba(255, 255, 255, 0.08) !important;
-}
 
 /* ==========================================================================
    4. FORCE DARK TEXT OVERRIDES (FOR NORMAL MODE VISIBILITY)
@@ -173,7 +128,6 @@ textarea {
 .form-group .input-group input.form-control:focus {
     background-color: #3a3a3a !important;
     box-shadow: none !important;
-    outline: none !important;
 }
 
 .input-group-addon.bg-blue {
@@ -317,4 +271,79 @@ h1#loginFormTitle,
     box-shadow: 0 4px 12px var(--active-shadow) !important;
     color: var(--text-inverse) !important;
     transform: translateY(-1px) !important;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --vj-main: #323232;
+    --vj-light: #5a5a5a;
+    --vj-grad: linear-gradient(135deg, #5a5a5a 0%, #525252 100%);
+    --bg-sidebar-item: #2c2c2c;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --ai-banner-bg: var(--vj-grad);
+    --active-shadow: rgba(0, 0, 0, 0.5);
+    --text-inverse: #ffffff;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f6f6f6;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #f1f1f1;
+    --bg-hover: #ebebeb;
+    --bg-muted: #f4f4f4;
+    --bg-code: #eeeeee;
+    --text-primary: #292929;
+    --text-secondary: #5c5c5c;
+    --text-heading: #1a1a1a;
+    --accent-color: #707070;
+    --accent-hover: #5c5c5c;
+    --text-on-accent: #ffffff;
+    --focus-ring: #707070;
+    --border-color: #dbdbdb;
+    --table-head-bg: #707070;
+    --table-head-text: #ffffff;
+    --sidebar-text: #333333;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-text: #262626;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-text-muted: #545454;
+    --sidebar-item-hover-bg: #e0e0e0;
+    --sidebar-section-bg: #707070;
+    --sidebar-item-active-bg: #707070;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #000000;
+    --bg-secondary: #0f0f0f;
+    --bg-sidebar: #050505;
+    --bg-hover: #242424;
+    --bg-muted: #1c1c1c;
+    --bg-code: #313131;
+    --text-primary: #c6c6c6;
+    --text-secondary: #a6a6a6;
+    --text-heading: #ffffff;
+    --accent-color: #cccccc;
+    --accent-hover: #ffffff;
+    --text-on-accent: #525252;
+    --focus-ring: #cccccc;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --table-head-bg: #a0a0a0;
+    --table-head-text: #333333;
+    --sidebar-section-text: #525252;
+    --sidebar-item-hover-text: #c9c9c9;
+    --sidebar-item-active-text: #525252;
+    --sidebar-item-active-text: #525252;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
+    --sidebar-item-hover-text: #636363;
+    --sidebar-section-text: #f5f5f5;
+    --sidebar-text: #7a7a7a;
 }

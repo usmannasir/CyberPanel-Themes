@@ -5,307 +5,86 @@
     Tested on CyberPanel 2.3 build 2
     Served with APACHE-2.0 license
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
+
+    Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors (#page-header, #sidebar-menu, .content-box, ...)
+    no longer exist in the panel.
 */
-
-body::-webkit-scrollbar {
-    background-color:#0d0e12 ;
-    width:16px
-}
-body::-webkit-scrollbar-track {
-    background-color:#0d0e12 
-}
-body::-webkit-scrollbar-track:hover {
-    background-color:#0d0e12 
-}
-body::-webkit-scrollbar-thumb {
-    background-color:#babac0;
-    border-radius:16px;
-    border:5px solid #0d0e12 
-}
-body::-webkit-scrollbar-thumb:hover {
-    background-color:#a0a0a5;
-    border:4px solid #0d0e12 
-}
-body::-webkit-scrollbar-button {display:none}
-
-
-.row-title,
-label, .current-pack{
-    color: #fff !important;
-}
-
-.content-box {
-    background-color: #1a1c21 !important;
-    border: 1px solid #393E46 !important;
-}
-
-.table {
-    border: 1px solid #393E46;
-    background: #1a1c21;
-}
-
-#page-title p {
-    color: #fff !important;
-}
-#page-sidebar li a.sf-with-ul:after {
-    color: #babac0 !important;
-}
-.content-box-wrapper .panel-body {
-
-    background-color: #1a1c21;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 50px;
-    align-items: center;
-}
-
-.content-box-wrapper .panel-body a {
-    color: #fff !important;
-}
-
-.btn-primary {
-    border: none;
-    border-radius: 50px !important;
-}
-
-a:focus,
-a:hover {
-    text-decoration: none !important;
-}
-
-h2 {
-    color: #fff !important;
-    font-weight: bolder !important;
-}
-
-body {
-    background-color: #1a1c21 !important;
-    color: #fff !important;
-
-}
-
-#sidebar-menu-item-server-ip-address>span {
-    color: #fff !important;
-    font-weight: 400 !important;
-}
-
-#page-sidebar ul li a .glyph-icon {
-    color: #fff !important;
-}
-
-.panel {
-    background-color: #0d0e12 !important;
-    border-radius: 10px;
-    border: 1px solid #393E46;
-}
 
 textarea {
     font-family: monospace;
 }
 
-div.tile-content-wrapper {
-    border-radius: 10px;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
 }
 
-a.tile-box.tile-box-shortcut.btn-primary {
-    border-radius: 10px;
-    background-color: #6495ED;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
-#page-header {
-    border-bottom: 1px solid #393E46;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    background-color: white !important;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f5f6f7;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #eff0f3;
+    --bg-hover: #e9eaed;
+    --bg-muted: #f2f3f5;
+    --bg-code: #edeef0;
+    --text-primary: #25282d;
+    --text-secondary: #535965;
+    --text-heading: #17191c;
+    --accent-color: #2469e6;
+    --accent-hover: #1757ca;
+    --text-on-accent: #ffffff;
+    --focus-ring: #2469e6;
+    --border-color: #d8dadf;
+    --table-head-bg: #2469e6;
+    --table-head-text: #ffffff;
+    --sidebar-text: #2b2e3b;
+    --sidebar-text-muted: #474c62;
+    --sidebar-section-bg: #2469e6;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #dbdde5;
+    --sidebar-item-hover-text: #20232c;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #2469e6;
 }
 
-#page-sidebar::-webkit-scrollbar {
-    display: none;
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #1a1c21;
+    --bg-secondary: #0d0e12;
+    --bg-sidebar: #0d0e12;
+    --bg-hover: #26272f;
+    --bg-muted: #26272f;
+    --bg-code: #0d0e12;
+    --text-primary: #ffffff;
+    --text-secondary: #babac0;
+    --text-heading: #ffffff;
+    --accent-color: #6495ed;
+    --accent-hover: #82aaf0;
+    --text-on-accent: #0d0e12;
+    --focus-ring: #6495ed;
+    --border-color: #393e46;
+    --table-head-bg: #0d0e12;
+    --table-head-text: #ffffff;
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #babac0;
+    --sidebar-section-bg: #1a1c21;
+    --sidebar-section-text: #babac0;
+    --sidebar-item-hover-bg: #26272f;
+    --sidebar-item-hover-text: #ffffff;
+    --sidebar-item-active-text: #2e2e2e;
+    --sidebar-item-active-text: #2e2e2e;
+    --border-soft: #26272f;
 }
 
-#page-sidebar {
-    border-right: 1px solid #393E46;
 
-    padding-top: 72px;
-    position: fixed;
-    overflow-y: scroll;
-    height: 100% !important;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-#page-content {
-    background-color: #1a1c21 !important;
-
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#page-content-wrapper {
-    width: calc(100% - 280px);
-    margin-left: 280px;
-}
-
-@media (min-width: 768px) {
-    #page-content {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    #page-content {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px) {
-    #page-content {
-        width: 1170px;
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700 !important;
-}
-
-#page-content {
-    padding-top: 120px;
-}
-
-#sidebar-menu {
-    background: #0d0e12;
-    padding: 5px 0px;
-}
-
-#page-header {
-    background: #0d0e12 !important;
-}
-
-.logo-bg {
-    background-color: transparent;
-}
-
-#sidebar-menu>li,
-#sidebar-menu>li:not([class])>a {
-    margin-block: 8px;
-}
-
-#sidebar-menu-item-users>a:focus {
-    text-decoration: none !important;
-}
-
-#sidebar-menu>li>a,
-.sidebar-submenu li>a {
-    cursor: pointer;
-    padding-inline: 12px;
-    line-height: 40px !important;
-    height: 40px !important;
-}
-
-.sidebar-submenu li>a {
-    margin-left: 40px;
-}
-
-#page-sidebar ul li.sfHover>a.sf-with-ul {
-    border-color: transparent;
-}
-
-#sidebar-menu li .sidebar-submenu {
-    border-color: transparent;
-}
-
-.header-btn {
-    margin-left: 20px !important;
-}
-
-.header-btn>i {
-    color: #6e6e6e !important;
-    font-size: 18px !important;
-}
-
-.btn-primary {
-    border: none;
-}
-
-#page-sidebar ul>li>a:hover {
-    border-color: transparent;
-    background-color: #26272f !important;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: none;
-}
-
-#sidebar-menu li .sidebar-submenu ul li {
-    border-color: transparent;
-}
-
-#page-sidebar li ul li a:before {
-    display: none;
-}
-
-a.sfActive {
-    border-radius: 50px !important;
-    border: 1px solid;
-    border-color: #babac0 !important;
-    border-right-width: 0px !important;
-    background-color: #26272f !important;
-    text-decoration: none !important;
-}
-
-#sidebar-menu li ul li:first-child,
-#sidebar-menu li ul li:first-child a {
-    border-radius: 50px !important;
-}
-
-#sidebar-menu li ul li:last-child,
-#sidebar-menu li ul li:last-child a {
-    border-radius: 50px !important;
-}
-
-a.sfActive span {
-    font-weight: 600;
-    text-decoration-style: none !important;
-}
-
-#sidebar-menu>li>a>span,
-.sidebar-submenu ul li a>span {
-    color: #ffffff;
-    font-size: 12px;
-    margin-left: 10px;
-    font-weight: 300;
-}
-
-#page-sidebar li a:hover .glyph-icon {
-    animation-name: none;
-}
-
-#page-sidebar li a .glyph-icon {
-    line-height: 40px;
-}
-
-#sidebar-menu>.header,
-#sidebar-menu>.divider {
-    display: none;
-}
-
-.sf-with-ul>.bs-label {
-    display: none;
-}
-
-#sidebar-menu-item-server-ip-address {
-    padding-bottom: 48px !important;
-}
-
-#sidebar-menu-item-server-ip-address:hover {
-    border-bottom-left-radius: 0px !important;
-    border-top-left-radius: 0px !important;
-    background-color: transparent !important;
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #f5f5f5;
 }

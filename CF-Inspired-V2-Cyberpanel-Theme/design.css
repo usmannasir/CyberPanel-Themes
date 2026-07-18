@@ -8,204 +8,77 @@
     /usr/local/CyberCP/public/static/emailMarketing  <-admin icons here
     /usr/local/CyberCP/public/static/images/icons    <- main icons here
     /usr/local/CyberCP/public/static/baseTemplate/assets/image-resources   <- admin logo goes here
+
+    Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors (#page-header, #sidebar-menu, .header-btn, ...)
+    no longer exist in the panel.
 */
-
-#page-sidebar ul li a .glyph-icon {
-    color: #022352 !important;
-}
-
-.panel {
-    border-radius: 10px;
-}
 
 textarea {
     font-family: monospace;
 }
 
-div.tile-content-wrapper {
-    border-radius: 10px;
-}
-
-a.tile-box.tile-box-shortcut.btn-primary {
-    border-radius: 10px;
-    background-color: #6495ED;
-}
-
-#page-header {
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    background-color: white !important;
-}
-
-#page-sidebar::-webkit-scrollbar {
-    display: none;
-}
-
-#page-sidebar {
-    padding-top: 72px;
-    position: fixed;
-    border-right: 1px solid #dfe8f1;
-    overflow-y: scroll;
-    height: 100% !important;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-#page-content {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#page-content-wrapper {
-    width: calc(100% - 280px);
-    margin-left: 280px;
-}
-
-@media (min-width: 768px) {
-    #page-content {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    #page-content {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px) {
-    #page-content {
-        width: 1170px;
-    }
-}
-
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700 !important;
+    font-weight: 700;
 }
 
-#page-content {
-    padding-top: 120px;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --shadow-color: rgba(2, 35, 82, 0.08);
 }
 
-#sidebar-menu {
-    background: transparent;
-    padding: 5px 0px;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #ffffff;
+    --bg-hover: #ecf4ff;
+    --bg-muted: #ecf4ff;
+    --bg-code: #eaeaea;
+    --text-primary: #121212;
+    --text-secondary: #6e6e6e;
+    --text-heading: #022352;
+    --accent-color: #3b6fd4;
+    --accent-hover: #2f5cb3;
+    --text-on-accent: #ffffff;
+    --focus-ring: #3b6fd4;
+    --border-color: #dfe8f1;
+    --table-head-bg: #ecf4ff;
+    --table-head-text: #022352;
+    --sidebar-text: #121212;
+    --sidebar-text-muted: #6e6e6e;
+    --sidebar-section-bg: #ecf4ff;
+    --sidebar-section-text: #022352;
+    --sidebar-item-hover-bg: #ecf4ff;
+    --sidebar-item-hover-text: #022352;
+    --border-soft: #ecf4ff;
 }
 
-#page-header {
-    background: transparent;
-    border-bottom: 1px solid #dfe8f1;
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13161b;
+    --bg-secondary: #191d24;
+    --bg-sidebar: #101217;
+    --bg-hover: #242933;
+    --bg-muted: #191d24;
+    --bg-code: #1f242d;
+    --text-primary: #e3e5e8;
+    --text-secondary: #acb1b9;
+    --text-heading: #f1f2f3;
+    --accent-color: #5c88db;
+    --accent-hover: #7da0e2;
+    --text-on-accent: #101010;
+    --focus-ring: #5c88db;
+    --border-color: #323a48;
+    --table-head-bg: #5c88db;
+    --table-head-text: #101010;
+    --sidebar-text: #acb1b9;
+    --sidebar-text-muted: #acb1b9;
+    --sidebar-section-bg: #5c88db;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242933;
+    --sidebar-item-hover-text: #e3e5e8;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }
-
-.logo-bg {
-    background-color: transparent;
-}
-
-#sidebar-menu>li, #sidebar-menu>li:not([class])>a {
-    margin-block: 8px;
-}
-
-#sidebar-menu>li>a, .sidebar-submenu li>a {
-    cursor: pointer;
-    padding-inline: 12px;
-    line-height: 40px !important;
-    height: 40px !important;
-}
-
-.sidebar-submenu li>a {
-    margin-left: 40px;
-}
-
-#page-sidebar ul li.sfHover>a.sf-with-ul {
-    border-color: transparent;
-}
-
-#sidebar-menu li .sidebar-submenu {
-    border-color: transparent;
-}
-
-.header-btn {
-    margin-left: 20px !important;
-}
-
-.header-btn>i {
-    color: #6e6e6e !important;
-    font-size: 18px !important;
-}
-
-.btn-primary {
-    border: none;
-}
-
-#page-sidebar ul>li>a:hover {
-    border-color: transparent;
-    background-color: #ECF4FF !important;
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    text-decoration: underline;
-    transition: none;
-}
-
-#sidebar-menu li .sidebar-submenu ul li {
-    border-color: transparent;
-}
-
-#page-sidebar li ul li a:before {
-    display: none;
-}
-
-a.sfActive {
-    border: 1px solid;
-    border-color: rgb(185,214,255) !important;
-    border-right-width: 0px !important;
-    background-color: rgb(236, 244, 255) !important;
-    border-bottom-left-radius: 50px !important;
-    border-top-left-radius: 50px !important;
-    text-decoration: underline !important;
-}
-
-a.sfActive span {
-    font-weight: 600;
-    text-decoration-style: underline !important;
-}
-
-#sidebar-menu>li>a>span, .sidebar-submenu ul li a>span {
-    color: rgb(18, 18, 18);
-    font-size: 13px;
-    margin-left: 10px;
-    font-weight: 300;
-}
-
-#page-sidebar li a:hover .glyph-icon {
-    animation-name: none;
-}
-
-#page-sidebar li a .glyph-icon {
-    line-height: 40px;
-}
-
-#sidebar-menu>.header, #sidebar-menu>.divider {
-    display: none;
-}
-
-.sf-with-ul>.bs-label {
-    display: none;
-}
-
-#sidebar-menu-item-server-ip-address {
-    padding-bottom: 48px !important;
-    border-bottom: 1px solid #dfe8f1 !important;
-}
-#sidebar-menu-item-server-ip-address:hover {
-    border-bottom-left-radius: 0px !important;
-    border-top-left-radius: 0px !important;
-    background-color: transparent !important;
-}
-#sidebar-menu-item-server-ip-address>span {
-    color: rgb(0, 43, 103) !important;
-    font-weight: 400 !important;
-}
-

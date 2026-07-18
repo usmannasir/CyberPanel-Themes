@@ -1,13 +1,26 @@
 /*
     Name: FLAT BLUE
-    Version: 1.2
+    Version: 2.0 (ported to the CyberPanel 2.4 design-token system;
+             original old-UI selectors no longer exist in the panel)
     Author: CypherPotato
-
-    Tested on CyberPanel 2.3 build 1
     Served with APACHE-2.0 license
-
     - CyberPanel repo: https://github.com/usmannasir/cyberpanel/
 */
+
+textarea {
+    font-family: monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.btn:not(.toggle) {
+    border-width: 0;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
 
 :root {
     --theme-color-0: #4040c5;
@@ -16,88 +29,60 @@
     --theme-color-3: #101052;
 }
 
-textarea {
-    font-family: monospace;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f4f5f9;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #ededf5;
+    --bg-hover: #e9ebf3;
+    --bg-muted: #f4f5f9;
+    --bg-code: #d8dcea;
+    --text-primary: #24292f;
+    --text-secondary: #57606a;
+    --text-heading: #1b1f24;
+    --accent-color: #303092;
+    --accent-hover: #202062;
+    --text-on-accent: #ffffff;
+    --focus-ring: #7f7fd8;
+    --border-color: #dfe2ea;
+    --table-head-bg: #303092;
+    --table-head-text: #ffffff;
+    --sidebar-text: #242442;
+    --sidebar-text-muted: #3b3b6d;
+    --sidebar-section-bg: #303092;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d7d7ea;
+    --sidebar-item-hover-text: #1b1b32;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #303092;
+    --sidebar-item-active-text: #ffffff;
 }
-#sidebar-menu-item-server-ip-address span {
-    color: white !important;
-    font-weight: 400 !important;
-}
-#sidebar-menu-item-server-ip-address span:before {
-    content: "Logged at ";
-}
-h1, h2, h3, h4, h5, h6,
-#page-title > h2,
-#page-title > p {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
-}
-.btn:not(.toggle) {
-    border-width: 0px;
-}
-.btn-primary {
-    border-width: 0px;
-    background-color: var(--theme-color-1);
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active:focus {
-    background: var(--theme-color-2);
-    background-color: var(--theme-color-2);
-}
-.btn-primary:active {
-    background-color: var(--theme-color-3);
-}
-#header-nav-right .header-btn {
-    border-color: rgba(0, 0, 0, 0.2);
-}
-#header-nav-right .header-btn:hover {
-    border-color: var(--theme-color-1);
-}
-#header-nav-right .header-btn i {
-    color: #222 !important;
-}
-#page-header {
-    background: white;
-}
-.sidebar-submenu {
-    margin: 0px !important;
-}
-.sidebar-submenu li {
-    background-color: var(--theme-color-2);
-    list-style: none;
-}
-#page-sidebar li ul li a:before {
-    display: none !important;
-}
-#sidebar-menu li .sidebar-submenu ul li a:hover,#sidebar-menu li .sidebar-submenu ul li a.sfActive {
-    background-color: var(--theme-color-3);
-}
-#sidebar-menu li .sidebar-submenu ul li, #sidebar-menu li .sidebar-submenu {
-    border-width: 0px;
-}
-#sidebar-menu, #header-logo {
-    background: var(--theme-color-1);
-    padding: 0;
-}
-#sidebar-menu > li > a, #page-sidebar li ul li a {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border-width: 0;
-    color: white !important;
-    padding: 0px 15px;
-    font-size: 14px;
-}
-#page-sidebar ul li.header {
-    color: white !important;
-    padding: 20px 15px;
-    margin: 0;
-    border-top: 1px solid var(--theme-color-0);
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-#page-sidebar ul li.divider {
-    display: none;
-}
-#sidebar-menu > li > a:hover {
-    background-color: var(--theme-color-2);
-}
-#page-sidebar ul li a .glyph-icon {
-    display: none;
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13131b;
+    --bg-secondary: #191924;
+    --bg-sidebar: #101017;
+    --bg-hover: #242433;
+    --bg-muted: #191924;
+    --bg-code: #1f1f2d;
+    --text-primary: #e3e3e8;
+    --text-secondary: #acacb9;
+    --text-heading: #f1f1f3;
+    --accent-color: #7d7dd4;
+    --accent-hover: #9c9cde;
+    --text-on-accent: #101010;
+    --focus-ring: #7d7dd4;
+    --border-color: #323248;
+    --table-head-bg: #7d7dd4;
+    --table-head-text: #101010;
+    --sidebar-text: #acacb9;
+    --sidebar-text-muted: #acacb9;
+    --sidebar-section-bg: #7d7dd4;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242433;
+    --sidebar-item-hover-text: #e3e3e8;
+    --sidebar-item-active-text: #101010;
+    --sidebar-item-active-bg: #7d7dd4;
+    --sidebar-item-active-text: #101010;
 }

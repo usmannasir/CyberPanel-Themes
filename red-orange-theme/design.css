@@ -1,14 +1,70 @@
-.bg-gradient-9 {
-background: #f12711;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-#page-sidebar a:hover {
-color: #f5af19;
-}
-.bsdatepicker td span:hover,.bsdatepicker td.active,.bsdatepicker td.day.active:hover,.bsdatepicker th.next:hover,.bsdatepicker th.prev:hover,.btn-primary.active,.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,.daterangepicker .calendar th.next:hover,.daterangepicker .calendar th.prev:hover,.daterangepicker td.active,.daterangepicker td.available.active:hover,.hover-primary:hover,.label-primary[href]:focus,.label-primary[href]:hover,.open .dropdown-toggle.btn-primary,.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover,.ui-accordion-header.ui-accordion-header-active.ui-state-hover,.ui-datepicker .ui-datepicker-next.ui-state-hover,.ui-datepicker .ui-datepicker-prev.ui-state-hover,.ui-datepicker td a:hover,.ui-dialog-buttonset button:hover,.ui-rangeSlider-bar:active,.ui-rangeSlider-bar:hover,.ui-slider-handle.ui-state-active,.ui-slider-handle.ui-state-hover{color:#fff;border-color: #f12711;background-color: #f12711;}
-.btn-primary{border-color: #f5af19;background-color: #f5af19;}
+/*
+    Name: Red Orange Theme
+    Amber-to-red identity (original header gradient #f5af19 -> #f12711,
+    buttons #f5af19 / #f12711) on the stock light layout.
+    (Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors no longer exist in the panel.)
+*/
 
-.btn-blue-alt.active, .btn-blue-alt.disabled, .btn-blue-alt.disabled.active, .btn-blue-alt.disabled:active, .btn-blue-alt.disabled:focus, .btn-blue-alt.disabled:hover, .btn-blue-alt:active, .btn-blue-alt:focus, .btn-blue-alt:hover, .btn-blue-alt[disabled], .btn-blue-alt[disabled].active, .btn-blue-alt[disabled]:active, .btn-blue-alt[disabled]:focus, .btn-blue-alt[disabled]:hover, .label-blue-alt[href]:focus, .label-blue-alt[href]:hover, .open .dropdown-toggle.btn-blue-alt {color:#fff;background:#f12711;border-color: #f12711;}
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
 
-.badge-blue-alt, .bg-blue-alt, .btn-blue-alt, .hover-blue-alt:hover, .label-blue-alt {color:#fff;background:#f5af19;border-color: #f5af19;}
+:root {
+    --theme-red: #f12711;
+    --theme-amber: #f5af19;
+    --shadow-color: rgba(80, 30, 10, 0.08);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #faf6f2;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #fbf2ea;
+    --bg-hover: #f7e9dd;
+    --bg-muted: #faf6f2;
+    --bg-code: #eee1d3;
+    --text-primary: #2f2a26;
+    --text-secondary: #6b5a4e;
+    --text-heading: #40251a;
+    --accent-color: #d6200c;
+    --accent-hover: #c01e0c;
+    --text-on-accent: #ffffff;
+    --focus-ring: #d6200c;
+    --border-color: #ecd9c8;
+    --table-head-bg: #f5af19;
+    --table-head-text: #4a3405;
+    --sidebar-text: #5a4f48;
+    --sidebar-text-muted: #6b5a4e;
+    --sidebar-section-bg: #d6200c;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #fdeadb;
+    --sidebar-item-hover-text: #b51c0b;
+    --border-soft: #f3e6d8;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #1b1413;
+    --bg-secondary: #241a19;
+    --bg-sidebar: #171010;
+    --bg-hover: #332524;
+    --bg-muted: #241a19;
+    --bg-code: #2d211f;
+    --text-primary: #e8e4e3;
+    --text-secondary: #b9aeac;
+    --text-heading: #f3f2f1;
+    --accent-color: #f3402c;
+    --accent-hover: #f56353;
+    --text-on-accent: #101010;
+    --focus-ring: #f3402c;
+    --border-color: #483432;
+    --table-head-bg: #f3402c;
+    --table-head-text: #101010;
+    --sidebar-text: #b9aeac;
+    --sidebar-text-muted: #b9aeac;
+    --sidebar-section-bg: #f3402c;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #332524;
+    --sidebar-item-hover-text: #e8e4e3;
+    --sidebar-item-active-text: #191919;
+    --sidebar-item-active-text: #191919;
+}

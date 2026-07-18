@@ -6,28 +6,6 @@
    Tested on: CyberPanel 2.4 build 4
    ========================================================================== */
 
-:root {
-    /* 1. BRAND COLORS */
-    --vj-main: #3f3e7d;
-    --vj-light: #4979b1;
-    --vj-grad: linear-gradient(135deg, #4979b1 0%, #3f3e7d 100%);
-
-    /* 2. LIGHT MODE SYSTEM OVERRIDES */
-    --bg-primary: #f0f4ff !important;
-    --bg-secondary: #ffffff !important;
-    --bg-sidebar: #fcfdff !important;
-    --bg-sidebar-item: #ffffff !important;
-    --text-primary: #0b003c !important;
-    --accent-color: var(--vj-main) !important;
-    --accent-hover: var(--vj-light) !important;
-    --border-color: rgba(63, 62, 125, 0.15) !important;
-    --shadow-color: rgba(63, 62, 125, 0.1) !important;
-    --ai-banner-bg: var(--vj-grad) !important;
-    --bg-hover: rgba(63, 62, 125, 0.08) !important;
-    --active-shadow: rgba(63, 62, 125, 0.4) !important;
-    --text-inverse: #ffffff !important;
-}
-
 #sidebar .menu-item.active {
     box-shadow: 0 3px 10px var(--active-shadow) !important;
 }
@@ -35,25 +13,6 @@
 /* ==========================================================================
    3. DARK MODE OVERRIDES (DEEP BLUE)
    ========================================================================== */
-[data-theme="dark"] {
-    --vj-dark-bg: #10121a;
-    --vj-card-bg: #1c1e29;
-    --vj-accent: #89aed6;
-    --vj-text: #e4e6ee;
-    --vj-border: #2a2c3d;
-
-    --bg-primary: var(--vj-dark-bg) !important;
-    --bg-secondary: var(--vj-card-bg) !important;
-    --bg-sidebar: #141620 !important;
-    --bg-sidebar-item: #202330 !important;
-    --text-primary: var(--vj-text) !important;
-    --text-secondary: #8a90a0 !important;
-    --accent-color: #4979b1 !important;
-    --border-color: var(--vj-border) !important;
-    --shadow-color: rgba(0, 0, 0, 0.5) !important;
-    --ai-banner-bg: linear-gradient(135deg, #2b4a70 0%, #1c1e29 100%) !important;
-    --bg-hover: rgba(255, 255, 255, 0.06) !important;
-}
 
 /* ==========================================================================
    4. LOGIN PAGE STYLES
@@ -255,4 +214,65 @@ h1#loginFormTitle,
     box-shadow: 0 4px 12px var(--active-shadow) !important;
     color: var(--text-inverse) !important;
     transform: translateY(-1px) !important;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --vj-main: #3f3e7d;
+    --vj-light: #4979b1;
+    --vj-grad: linear-gradient(135deg, #4979b1 0%, #3f3e7d 100%);
+    --bg-sidebar-item: #ffffff;
+    --shadow-color: rgba(63, 62, 125, 0.1);
+    --ai-banner-bg: var(--vj-grad);
+    --active-shadow: rgba(63, 62, 125, 0.4);
+    --text-inverse: #ffffff;
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f0f4ff;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #fcfdff;
+    --bg-hover: rgba(63, 62, 125, 0.08);
+    --bg-muted: #f0f4ff;
+    --bg-code: #c5d5ff;
+    --text-primary: #0b003c;
+    --text-secondary: #0b003c;
+    --text-heading: #0b003c;
+    --accent-color: #3f3e7d;
+    --accent-hover: #4979b1;
+    --text-on-accent: #ffffff;
+    --focus-ring: #4979b1;
+    --border-color: rgba(63, 62, 125, 0.15);
+    --table-head-bg: #3f3e7d;
+    --table-head-text: #ffffff;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13131b;
+    --bg-secondary: #191924;
+    --bg-sidebar: #101017;
+    --bg-hover: #242433;
+    --bg-muted: #191924;
+    --bg-code: #201f2d;
+    --text-primary: #e4e3e8;
+    --text-secondary: #adacb9;
+    --text-heading: #f2f1f3;
+    --accent-color: #8180c0;
+    --accent-hover: #9c9bce;
+    --text-on-accent: #101010;
+    --focus-ring: #8180c0;
+    --border-color: #333248;
+    --table-head-bg: #8180c0;
+    --table-head-text: #101010;
+    --sidebar-text: #adacb9;
+    --sidebar-text-muted: #adacb9;
+    --sidebar-section-bg: #8180c0;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242433;
+    --sidebar-item-hover-text: #e4e3e8;
+    --sidebar-item-active-text: #1f1f1f;
+    --sidebar-item-active-text: #1f1f1f;
 }

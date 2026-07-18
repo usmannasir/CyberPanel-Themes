@@ -1,0 +1,90 @@
+/* Formerly named "soft-dark-theme" — renamed because every theme now ships
+   both a light and a dark palette (the panel mode toggle picks one). */
+/*
+    Name: Soft-Dark Theme
+    Author: eozgun - https://github.com/eozgun/cyberpanel-design
+    License: same as the CyberPanel repo (https://github.com/usmannasir/cyberpanel/)
+    Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors no longer exist in the panel. The layered
+    blue-gray surfaces (#22282b content, #282f32 cards, #2f373a
+    sidebar, #3a4346 hover) and visible #454a53 borders are preserved.
+*/
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
+:root {
+    --shadow-color: rgba(69, 74, 83, 0.63);
+}
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #f5f5f7;
+    --bg-secondary: #ffffff;
+    --bg-sidebar: #f0f2f2;
+    --bg-hover: #e9e9ed;
+    --bg-muted: #f2f2f5;
+    --bg-code: #ededf0;
+    --text-primary: #25252d;
+    --text-secondary: #535365;
+    --text-heading: #17171c;
+    --accent-color: #605dd9;
+    --accent-hover: #403cd1;
+    --text-on-accent: #ffffff;
+    --focus-ring: #7876df;
+    --border-color: #d8d8df;
+    --table-head-bg: #605dd9;
+    --table-head-text: #ffffff;
+    --sidebar-text: #2e3538;
+    --sidebar-text-muted: #4b585d;
+    --sidebar-section-bg: #605dd9;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #dde2e4;
+    --sidebar-item-hover-text: #22282a;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #605dd9;
+    --sidebar-item-active-text: #ffffff;
+}
+
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #22282b;
+    --bg-secondary: #282f32;
+    --bg-sidebar: #2f373a;
+    --bg-hover: #3a4346;
+    --bg-muted: #282f32;
+    --bg-code: #202124;
+    --text-primary: #e0e4e6;
+    --text-secondary: #adb3b6;
+    --text-heading: #e6eaec;
+    --accent-color: #918fe5;
+    --accent-hover: #a5a3ea;
+    --text-on-accent: #1f1f1f;
+    --focus-ring: #7877de;
+    --border-color: #454a53;
+    --table-head-bg: #2f373a;
+    --table-head-text: #dfe4e6;
+    --sidebar-text: #dfe4e6;
+    --sidebar-text-muted: #9ba1ac;
+    --sidebar-section-bg: #3a4346;
+    --sidebar-section-text: #dfe4e6;
+    --sidebar-item-hover-bg: #3a4346;
+    --sidebar-item-hover-text: #d7d7d9;
+    --sidebar-item-active-text: #0e0e12;
+    --sidebar-item-active-text: #0e0e12;
+    --skeleton-base: #2f373a;
+    --skeleton-shine: #454a53;
+    --border-soft: #3a4045;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-bg: #7876df;
+    --sidebar-item-active-text: #efeff2;
+}
+
+
+/* WCAG contrast fixes (dark mode). */
+[data-theme="dark"] {
+    --sidebar-item-active-text: #18181d;
+}

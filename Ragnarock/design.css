@@ -1,4 +1,15 @@
-/* Color Variables */
+/*
+    Name: Ragnarock
+    A warm parchment-and-navy theme: cream page, deep navy sidebar,
+    orange / red / gold accents.
+    (Ported to the CyberPanel 2.4 design-token system; the original
+    old-UI selectors no longer exist in the panel.)
+*/
+
+
+
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+
 :root {
     --primary: #003049;
     --secondary: #f77f00;
@@ -6,293 +17,64 @@
     --background: #eae2b7;
     --background-light: #f6efca;
     --highlight: #fdc85e;
-    --text-muted: #8da0aa;
-    --border-light: #d3cb87f2;
-    --white: #ffffff;
+    --shadow-color: rgba(17, 17, 26, 0.1);
 }
 
-/* Header and Base Styles */
-body, #loading {
-    background-color: var(--primary);
-    color: var(--primary) !important;
+/* Theme palette (light / default mode) — WCAG 2.2 audited */
+:root {
+    --bg-primary: #eae2b7;
+    --bg-secondary: #f6efca;
+    --bg-sidebar: #edf2f5;
+    --bg-hover: #ddd39e;
+    --bg-muted: #f0eddb;
+    --bg-code: #e0d596;
+    --text-primary: #003049;
+    --text-secondary: #546770;
+    --text-heading: #003049;
+    --accent-color: #003049;
+    --accent-hover: #b75e00;
+    --text-on-accent: #ffffff;
+    --focus-ring: #c76600;
+    --border-color: #d3cb87;
+    --table-head-bg: #f6efca;
+    --table-head-text: #003049;
+    --sidebar-text: #243842;
+    --sidebar-text-muted: #3b5c6d;
+    --sidebar-section-bg: #003049;
+    --sidebar-section-text: #ffffff;
+    --sidebar-item-hover-bg: #d7e3ea;
+    --sidebar-item-hover-text: #1b2a32;
+    --sidebar-item-active-text: #ffffff;
+    --sidebar-item-active-bg: #003049;
+    --sidebar-item-active-text: #ffffff;
+    --border-soft: #e0d9a4;
 }
 
-#page-header {
-    background: var(--primary) !important;
-}
-
-/* Badge Styles */
-.badge {
-    color: var(--primary);
-    background-color: var(--accent);
-}
-
-.badge-yellow {
-    background-color: var(--highlight) !important;
-    opacity: 0.8;
-    color: var(--primary);
-}
-
-/* Sidebar Styles */
-#sidebar-menu {
-    background: var(--primary);
-}
-
-.scroll-sidebar {
-    background: var(--primary);
-}
-
-#page-sidebar ul li.header {
-    color: var(--secondary) !important;
-}
-
-#sidebar-menu>li>a {
-    color: var(--background) !important;
-}
-
-#page-sidebar ul li a .glyph-icon {
-    color: var(--highlight) !important;
-    opacity: 1;
-}
-
-#page-sidebar ul li a[title~="Address"] {
-    background-color: var(--background) !important;
-    min-width: 250px;
-}
-
-#page-sidebar ul li a[title~="Address"] .glyph-icon {
-    color: var(--primary) !important;
-}
-
-#page-sidebar ul li a:not([title~="Server"]):hover {
-    border-color: var(--secondary);
-}
-
-#page-sidebar ul li a[title~="Server"]:hover {
-    border: none;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 35px;
-}
-
-#page-sidebar ul li a.sfActive {
-    border-bottom: 1px solid var(--secondary);
-}
-
-a[title~="CPU"] {
-    opacity: 0.6;
-}
-
-/* Content Area Styles */
-#page-content,
-.panel,
-.panel-body {
-    background: var(--background);
-    box-shadow: none;
-}
-
-.panel {
-    background-color: var(--background) !important;
-    border: none;
-}
-
-/* Button Styles */
-.btn-primary {
-    border: none;
-    background: var(--primary);
-    box-shadow: rgba(255, 255, 255, 0.2) 0 0 0 1px inset,
-        rgba(255, 255, 255, 0.9) 0 0 0 1px;
-}
-
-.btn-primary:focus,
-.btn-primary:hover {
-    background: var(--secondary);
-}
-
-.btn-primary[disabled] {
-    color: var(--white);
-    border: none;
-    background-color: var(--primary);
-}
-
-/* Column and Content Box Styles */
-.col-md-pull-50 {
-    box-shadow: rgba(17, 17, 26, 0.05) 0 1px 0,
-        rgba(17, 17, 26, 0.1) 0 0 8px;
-    min-width: 150px !important;
-    background-color: var(--background-light) !important;
-}
-
-.col-md-pull-50:hover {
-    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
-}
-
-.col-md-12 {
-    box-shadow: none !important;
-    border: none;
-}
-
-/* Loading Animation */
-.spinner>div {
-    background-color: var(--secondary);
-    height: 100%;
-    width: 25px;
-    display: inline-block;
-}
-
-.spinner .bounce1 {
-    animation-delay: -1.1s;
-}
-
-.spinner .bounce2 {
-    animation-delay: -1s;
-}
-
-.spinner .bounce3 {
-    animation-delay: -0.9s;
-}
-
-@keyframes stretchdelay {
-    0%, 40%, 100% {
-        transform: scaleY(0.2);
-    }
-
-    20% {
-        transform: scaleY(1.1);
-    }
-}
-
-/* Text and Content Styles */
-.content-box-header {
-    color: var(--primary);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-decoration: underline;
-    text-decoration-color: var(--border-light);
-    text-underline-offset: 40%;
-}
-
-p {
-    color: var(--primary);
-    opacity: 1;
-}
-
-#page-title p {
-    opacity: 1;
-}
-
-.text-muted {
-    color: var(--primary) !important;
-    opacity: 0.6;
-}
-
-.divider {
-    visibility: hidden;
-}
-
-/* Tile and Progress Styles */
-.tile-box {
-    color: #f0eddb;
-}
-
-.c100 {
-    background-color: var(--primary) !important;
-}
-
-.c100.red .bar,
-.c100.red .fill,
-.c100.red.dark .bar,
-.c100.red.dark .fill,
-.c100.green .bar,
-.c100.green .fill,
-.c100.green.dark .bar,
-.c100.green.dark .fill {
-    border-color: var(--accent) !important;
-}
-
-/* Form and Input Styles */
-.form-control {
-    opacity: 0.7;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
-}
-
-.form-control:focus,
-input:focus {
-    outline: 0 !important;
-    border: none;
-}
-
-/* Alert Styles */
-.alert {
-    background: var(--primary) !important;
-}
-
-.alert>p {
-    color: var(--white) !important;
-}
-
-/* Table Styles */
-table {
-    background-color: var(--background-light) !important;
-    box-shadow: rgba(17, 17, 26, 0.05) 0 1px 0,
-        rgba(17, 17, 26, 0.1) 0 0 8px;
-    color: var(--primary) !important;
-}
-
-th {
-    border-bottom: 1px solid #e9d778 !important;
-}
-
-.table-responsive {
-    border-bottom: 1px solid var(--border-light) !important;
-}
-
-/* Navigation Styles */
-.nav>li.active {
-    background-color: var(--primary);
-    border: none !important;
-}
-
-.nav>li.active>a {
-    background: var(--primary) !important;
-    border: none !important;
-}
-
-.nav>li>a:hover {
-    background: var(--primary) !important;
-    color: var(--white) !important;
-}
-
-.nav-tabs {
-    border-color: #e5d894 !important;
-}
-
-/* Specific Link Styles */
-a[title~="Manager"] {
-    text-decoration: none;
-    color: var(--primary) !important;
-    font-weight: 400;
-}
-
-a[title~="DKIM"],
-a[title~="Package"] {
-    color: var(--text-muted) !important;
-}
-
-/* Dropdown Styles */
-.dropdown-menu {
-    background: var(--background-light) !important;
-}
-
-/* Notification Styles */
-.brighttheme-success {
-    background-color: var(--background-light) !important;
-    color: var(--primary);
-}
-
-/* Hover Effects */
-.ng-binding:not(.badge):hover {
-    color: var(--accent) !important;
+/* Dark-toggle palette — theme-controlled, WCAG 2.2 audited */
+[data-theme="dark"] {
+    --bg-primary: #13181b;
+    --bg-secondary: #192024;
+    --bg-sidebar: #101417;
+    --bg-hover: #242e33;
+    --bg-muted: #192024;
+    --bg-code: #1f282d;
+    --text-primary: #e3e6e8;
+    --text-secondary: #acb4b9;
+    --text-heading: #f1f2f3;
+    --accent-color: #008ed8;
+    --accent-hover: #02a8ff;
+    --text-on-accent: #101010;
+    --focus-ring: #008ed8;
+    --border-color: #324148;
+    --table-head-bg: #008ed8;
+    --table-head-text: #101010;
+    --sidebar-text: #acb4b9;
+    --sidebar-text-muted: #acb4b9;
+    --sidebar-section-bg: #008ed8;
+    --sidebar-section-text: #101010;
+    --sidebar-item-hover-bg: #242e33;
+    --sidebar-item-hover-text: #e3e6e8;
+    --sidebar-item-active-text: #101010;
+    --sidebar-item-active-bg: #008ed8;
+    --sidebar-item-active-text: #101010;
 }
